@@ -1,0 +1,7 @@
+<!-- sample rectangle -->
+<svg width="87" height="79" viewBox="0 0 87 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.5215 9.68909L68.5885 30.3925" stroke="#F50808" stroke-width="1.875"/>
+<path d="M85.8624 22.6285L47.4732 39.8814M47.4732 39.8814L1.40625 19.178M47.4732 39.8814V77.8376" stroke="#0C64F7" stroke-width="1.875"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M85.8624 22.6287V57.1344L47.4732 77.8378L1.40625 57.1344V19.1781L39.7954 1.92529L85.8624 22.6287Z" stroke="#0C64F7" stroke-width="1.875" stroke-linecap="square"/>
+</svg>
+
