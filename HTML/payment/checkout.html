@@ -2,45 +2,64 @@
 <html lang="en">
 
 <head>
+    <!-- Sets the character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Ensures the webpage is responsive and adapts to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="../../style/root.css">
+    
 </head>
 
 <body>
     <header>
+        <!-- The header of the page, containing the navigation bar -->
         <nav>
+            <!-- Navigation section -->
             <div>
+                <!-- Logo container -->
                 <img src="/assets/images/logo.png" alt="Games We Played Logo">
+                <!-- The website's logo -->
             </div>
             <ul>
+                <!-- Navigation links -->
                 <li><a href="/index.html">PlayStation</a></li>
                 <li><a href="#xbox">Xbox</a></li>
                 <li><a href="#switch">Switch</a></li>
                 <li><a href="#controllers">Controllers</a></li>
                 <li><a href="#storage">Storage</a></li>
             </ul>
-            <div>
-                <input type="search" placeholder="Search">
-                <button>
-                    <img src="/assets/icons/search-svgrepo-com.svg" alt="">
-                </button>
+            <div class="search-container">
+                <form action="/html/search/search-result-page.html">
+                    <input type="search" placeholder="Search" class="search-input">
+                    <button type="submit" class="search-button">
+                        <img src="/assets/icons/search-svgrepo-com.svg" alt="Search">
+                    </button>
+                </form>
             </div>
             <div>
-                <a href="#profile"><img src="/assets/icons/profile.svg" alt="Profile"></a>
-                <a href="#favorites"><img src="/assets/icons/favorite.svg" alt="Favorites"></a>
-                <a href="#cart"><img src="/assets/icons/cart-marked.svg" alt="Cart"></a>
+                <!-- User actions (profile, favorites, cart) -->
+                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;" alt="Profile"></a>
+                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;" alt="Favorites"></a>
+                <a href="#cart"><img src="/assets/icons/cart-marked.svg" style="width: 35px; height: 40px;" alt="Cart"></a>
             </div>
         </nav>
     </header>
-    <!---------------------------------------------------------------------------------------------- main ---------------------------------------------------------------------------------->
+
+    <!-- Main content section -->
     <main>
-        <!-----------------------------------------------------------------------------------------Payment success popup page-------------------------------------------------------------------->
+        <!-- Payment success popup page -->
         <section aria-labelledby="success-popup-page">
+            <!-- Main section for the payment success message -->
             <section aria-labelledby="payment-success">
-                <h2 id="payment-success">Payment success, thank you for shopping !</h2>
+                <!-- Payment success message -->
+                <h2 id="payment-success">Payment success, thank you for shopping!</h2>
                 <div class="order-summary">
+                    <!-- Order summary section -->
                     <div class="order-items">
+                        <!-- List of ordered items -->
                         <article>
                             <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                             <div>
@@ -63,6 +82,7 @@
                             </div>
                         </article>
                         <div class="delivery-info">
+                            <!-- Delivery information -->
                             <p>Delivering to:</p>
                             <p id="delivery-address">1234 Main Street City, State12345</p>
                             <p>Estimated delivery: 25/05</p>
@@ -70,34 +90,45 @@
                     </div>
 
                     <div class="invoice-details">
+                        <!-- Invoice details section -->
                         <h3>Invoice</h3>
                         <p>Number: INV-49535-23-1234</p>
                         <p>Date: 19/05/2024</p>
 
                         <h4>Seller</h4>
+                        <!-- Seller information -->
                         <p>123 Main Street City, State12345</p>
                         <p>Phone: 555-555-1234</p>
 
                         <h4>Buyer</h4>
+                        <!-- Buyer information -->
                         <p>813 Howard Street Oswego, NY 13126 USA</p>
 
                         <h4>Item</h4>
+                        <!-- Ordered items with prices -->
                         <p>Final Fantasy XVI<br>Price: $69</p>
                         <p>SIFU<br>Price: $69</p>
                         <p>Call of Duty: Modern Warfare III<br>Price: $69</p>
 
                         <p>Shipping: FREE</p>
+                        <!-- Shipping cost -->
                         <p>Total: $211</p>
+                        <!-- Total cost -->
                     </div>
                 </div>
 
                 <div class="actions">
+                    <!-- Actions section -->
                     <button type="button" onclick="location.href='continue-shopping.html'">Keep shopping</button>
+                    <!-- Button to continue shopping -->
                 </div>
             </section>
         </section>
+
         <h2>Check out</h2>
+        <!-- Checkout heading -->
         <nav aria-label="breadcrumb">
+            <!-- Breadcrumb navigation -->
             <ul>
                 <li><a href="#cart">cart</a></li>
                 <li><a href="#information">information</a></li>
@@ -107,12 +138,15 @@
         </nav>
 
         <div class="checkout-container">
+            <!-- Checkout container -->
             <div class="infos">
+                <!-- Contact information section -->
                 <section aria-labelledby="contact-section">
                     <h3 id="contact-section">Contact</h3>
                     <form>
                         <fieldset>
                             <legend>Card type</legend>
+                            <!-- Card type selection -->
                             <div class="card-types">
                                 <img src="/assets/images/mastercard.png" alt="MasterCard">
                                 <img src="/assets/images/visa.png" alt="Visa">
@@ -120,9 +154,11 @@
                                 <a href="#see-all">See all</a>
                             </div>
                             <p>Already have an account? <a href="#login">Log in</a></p>
+                            <!-- Log in link for existing users -->
                         </fieldset>
                         <fieldset>
                             <legend>Your email</legend>
+                            <!-- Email input field -->
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" placeholder="Name" required>
                             <div>
@@ -132,9 +168,11 @@
                         </fieldset>
                         <fieldset>
                             <legend>Shipping address</legend>
+                            <!-- Shipping address input fields -->
                             <label for="country">Country/Region</label>
                             <select id="country" name="country" required>
                                 <option value="">Country/Region</option>
+                                <!-- Country options -->
                                 <option value="Australia">Australia</option>
                                 <option value="China">China</option>
                                 <option value="France">France</option>
@@ -153,7 +191,7 @@
                             <input type="text" id="state" name="state" placeholder="State" required>
                             <label for="postcode">Postcode</label>
                             <input type="text" id="postcode" name="postcode" placeholder="Postcode" required
-                                pattern="\d{4,4}" title="Please enter only 4 digits" required>
+                                pattern="\d{4,4}" title="Please enter only 4 digits">
                             <label for="first-name">First name(optional)</label>
                             <input type="text" id="firstname" name="first-name" placeholder="First name">
                             <label for="Last-name">*Last name</label>
@@ -170,8 +208,10 @@
                 </section>
 
                 <aside aria-labelledby="order-summary">
+                    <!-- Order summary aside -->
                     <h3 id="order-summary">Order summary</h3>
                     <ul>
+                        <!-- List of ordered items -->
                         <li>
                             <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                             <div>
@@ -228,6 +268,7 @@
                         <button type="submit">➔</button>
                     </form>
                     <div class="order-totals">
+                        <!-- Order totals -->
                         <p>Subtotal: $207</p>
                         <p>Shipping: Calculated after filling shipping address</p>
                         <p>Total: AUD$211</p>
@@ -236,13 +277,15 @@
                     </div>
                 </aside>
             </div>
+
             <div class="method">
+                <!-- Shipping information section -->
                 <section aria-labelledby="shipping-info">
                     <h2 id="shipping-info">Shipping Information</h2>
                     <div>
                         <div>
                             <h3>Contact</h3>
-                            <p id="user_email">peferctnature@gmail.com</p>
+                            <p id="user_email">perfectnature@gmail.com</p>
                         </div>
                         <button type="button">Change</button>
                     </div>
@@ -264,9 +307,12 @@
                         <button type="button">Change</button>
                     </div>
                 </section>
+
                 <aside aria-labelledby="order-summary">
+                    <!-- Order summary aside -->
                     <h3 id="order-summary">Order summary</h3>
                     <ul>
+                        <!-- List of ordered items -->
                         <li>
                             <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                             <div>
@@ -323,6 +369,7 @@
                         <button type="submit">➔</button>
                     </form>
                     <div class="order-totals">
+                        <!-- Order totals -->
                         <p>Subtotal: $207</p>
                         <p>Shipping: Calculated after filling shipping address</p>
                         <p>Total: AUD$211</p>
@@ -331,13 +378,15 @@
                     </div>
                 </aside>
             </div>
+
             <div class="payment">
+                <!-- Payment section -->
                 <section aria-labelledby="shipping-info">
                     <h2 id="shipping-info">Shipping Information</h2>
                     <div>
                         <div>
                             <h3>Contact</h3>
-                            <p id="user_email">peferctnature@gmail.com</p>
+                            <p id="user_email">perfectnature@gmail.com</p>
                         </div>
                         <button type="button">Change</button>
                     </div>
@@ -358,7 +407,9 @@
                         <button type="button">Change</button>
                     </div>
                 </section>
+
                 <section aria-labelledby="payment-section">
+                    <!-- Payment method selection -->
                     <h2 id="payment-section">Payment</h2>
                     <p>All transactions are secure and encrypted</p>
 
@@ -414,12 +465,15 @@
                             </div>
                         </fieldset>
 
-                        <a href="#return-to-shipping">Return to shipping</a>
+                        <a href="../../index.html">Return to shipping</a>
                     </form>
                 </section>
+
                 <aside aria-labelledby="order-summary">
+                    <!-- Order summary aside -->
                     <h3 id="order-summary">Order summary</h3>
                     <ul>
+                        <!-- List of ordered items -->
                         <li>
                             <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                             <div>
@@ -476,6 +530,7 @@
                         <button type="submit">➔</button>
                     </form>
                     <div class="order-totals">
+                        <!-- Order totals -->
                         <p>Subtotal: $207</p>
                         <p>Shipping: Calculated after filling shipping address</p>
                         <p>Total: AUD$211</p>
@@ -484,11 +539,93 @@
                     </div>
                 </aside>
             </div>
-
         </div>
-
-
     </main>
+     <!--------------------------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------>
+     <footer>
+        <section aria-labelledby="join-us">
+            <h2 id="join-us">JOIN US!</h2>
+            <p>Subscribe now and be the first to know about <strong style="color: #F50808;">Exclusive Offers - Deals - Sales - New Releases and
+                    MORE!</strong></p>
+            <form action="#" method="post">
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <section aria-labelledby="features">
+            <div class="features-grid">
+                <article>
+                    <img src="/assets/icons/top-notch support.svg" alt="Top-notch support">
+                    <h3>Top-notch support</h3>
+                    <p>Years of experience in customer service.</p>
+                    <span>Years of experience in customer service.</span>
+                </article>
+                <article>
+                    <img src="/assets/icons/shipping internationally.svg" alt="Shipping Internationally">
+                    <h3>Shipping Internationally</h3>
+                    <p>International orders processed weekly.</p>
+                    <span>International orders processed weekly.</span>
+                    
+                </article>
+                <article>
+                    <img src="/assets/icons/satisfied or refunded.svg" alt="Satisfied or refunded">
+                    <h3>Satisfied or refunded</h3>
+                    <p>60 days warranty storewide.</p>
+                    <span>60 days warranty storewide.</span>
+                </article>
+                <article>
+                    <img src="/assets/icons/secure payments.svg" alt="Secure payments">
+                    <h3>Secure payments</h3>
+                    <p>Payment options to suit everyone.</p>
+                    <span>Payment options to suit everyone.</span>
+                </article>
+            </div>
+        </section>
+        <section aria-labelledby="disclaimer">
+            <header>
+                <h2 id="disclaimer">DISCLAIMER</h2>
+                <button>
+                    <img src="/assets/icons/plus-icon.svg" alt="Expand">
+                </button>
+            </header>
+            <p>
+                Please note that games and genuine products are all preowned and have previously been used unless
+                otherwise stated. Some scuffs and scratches from use are likely.
+                Images in product description is a general indication and not necessarily an exact image. Brand New
+                and/or sealed items will not be tested.
+                Please refer to our refunds policy.
+            </p>
+        </section>
+        <button><img src="/assets/icons/plus-icon.svg" alt="Expand"></button>
+        <nav>
+            <ul>
+                <li><a href="#about-us">ABOUT US</a></li>
+                <li><a href="#customer-reviews">CUSTOMER REVIEWS</a></li>
+                <li><a href="#delivery">DELIVERY</a></li>
+                <li><a href="#privacy-policy">Privacy policy</a></li>
+                <li><a href="#contact-us">Contact us</a></li>
+                <li><a href="#do-not-sell">Do not sell my personal information</a></li>
+                <li><a href="#afterpay">AFTERPAY</a></li>
+                <li><a href="#privacy-policy">PRIVACY POLICY</a></li>
+                <li><a href="#warranty">WARRANTY</a></li>
+                <li><a href="#tos">TOS</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <p>Follow Us</p>
+            <a href="#"><img src="/assets/icons/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="/assets/icons/instagram.svg" alt="Instagram"></a>
+        </div>
+        <div class="payment-options">
+            <p>We Accept</p>
+            <img src="/assets/icons/s-payment.svg" alt="Payment Options">
+            <img src="/assets/icons/paypal.svg" alt="PayPal Icon">
+        </div>
+        <p>© 2024 Games We Played</p>
+    </footer>
+</body>
+
+</html>
 </body>
 
 </html>

@@ -1,0 +1,374 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer, section {
+    width: 100%;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 10px;
+    border-bottom: 1px solid #ddd;
+    overflow-x: hidden;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background: var(--primary-color-light);
+    height: 50px;
+    border-radius: 50px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color-light);
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.search-input {
+    border: none;
+    padding: 10px;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+    font-size: 16px;
+    width: 200px;
+    background-color: transparent;
+}
+
+.search-button {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+}
+
+.search-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.showcase {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.showcase article {
+    position: relative;
+}
+
+.showcase article img {
+    width: 100%;
+    height: auto;
+}
+
+.showcase .content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.showcase .content .price-like {
+    display: flex;
+    align-items: center;
+}
+
+.showcase .content .price-like button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.showcase .content .add-to-cart button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.showcase .content .scenes {
+    display: flex;
+    margin-top: 20px;
+}
+
+.showcase .content .scenes figure {
+    margin-right: 10px;
+}
+
+.showcase .content .scenes img {
+    width: 100px;
+    height: auto;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+section header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+section header h2 {
+    font-size: 2em;
+}
+
+section header a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.game-grid article {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.game-grid article img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.game-grid .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-grid .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+footer {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: var(--primary-color-light);
+}
+
+footer section[aria-labelledby="join-us"] {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #000;
+    padding: 50px 150px;
+    margin: 0;
+}
+
+footer section[aria-labelledby="join-us"] p {
+    width: 443px;
+    margin: 10px 0;
+    color: #96a0a6;
+    text-align: left;
+}
+
+footer section[aria-labelledby="join-us"] form {
+    display: flex;
+    margin: 0;
+}
+
+footer section[aria-labelledby="join-us"] form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+footer section[aria-labelledby="join-us"] form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e63946;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+footer section[aria-labelledby="footer-bottom"] {
+    padding: 10px 50px;
+}
+
+footer section[aria-labelledby="footer-bottom"] > button {
+    background: var(--primary-color-light);
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+footer section[aria-labelledby="footer-bottom"] > button img {
+    margin: 0;
+}
+
+section[aria-labelledby
+
+="features"] {
+    margin: 0;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.features-grid article {
+    text-align: center;
+}
+
+.features-grid img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+section[aria-labelledby="disclaimer"] {
+    margin: 0;
+}
+
+section[aria-labelledby="disclaimer"] > header {
+    background: var(--primary-color-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section[aria-labelledby="disclaimer"] header > button {
+    margin: 0;
+    border: none;
+    background: var(--primary-color-light);
+}
+
+section[aria-labelledby="disclaimer"] header p {
+    color: #1e2d7d;
+    text-align: center;
+}
+
+section[aria-labelledby="disclaimer"] > p {
+    padding-top: 5px;
+    line-height: 2.5;
+    color: #000;
+    text-align: start;
+    column-gap: 10;
+    margin: 0;
+}
+
+footer nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+footer nav ul li {
+    margin: 15px 20px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+    color: #007bff;
+}
+
+footer .social-media,
+footer .payment-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+footer .social-media a,
+footer .payment-options img {
+    margin: 0 10px;
+}
+
+footer .social-media img,
+footer .payment-options img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .social-media p,
+footer .payment-options p {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+}

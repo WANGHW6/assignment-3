@@ -1,0 +1,64 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h2, h3, h4 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #666;
+}
+
+.showcase .content h2 {
+    font-size: 3em;
+}
+
+.showcase .content p {
+    margin-bottom: 10px;
+}
+
+.showcase .content .price-like span {
+    font-size: 2em;
+}
+
+footer h2 {
+    font-size: 24px;
+    color: #222;
+}
+
+footer h3 {
+    font-size: 18px;
+    color: #0c64f7;
+}
+
+footer p {
+    font-size: 16px;
+    color: #333;
+}
+
+footer .features-grid p,
+footer .features-grid article span {
+    font-size: 12px;
+    color: #96a0a6;
+}

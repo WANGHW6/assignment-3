@@ -1,0 +1,220 @@
+/* Footer */
+footer {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: var(--primary-color-light);
+}
+footer #join-us {
+  color: var(--on-primary-color);
+  margin: 0;
+}
+
+footer section[aria-labelledby="join-us"] {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #000;
+  padding: 50px 150px;
+  margin: 0;
+  width: 100%;
+}
+footer section[aria-labelledby="join-us"] p {
+  text-align: left;
+  width: 443px;
+  margin: 10px 0;
+  color: #96a0a6;
+}
+footer section[aria-labelledby="join-us"] form {
+  margin: 0;
+  display: flex;
+}
+
+footer section[aria-labelledby="join-us"] form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+}
+footer section[aria-labelledby="join-us"] form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e63946;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* footer-bootom */
+footer section[aria-labelledby="footer-bottom"] {
+  padding: 10px 50px;
+}
+footer section[aria-labelledby="footer-bottom"] > button {
+  background: var(--primary-color-light);
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0 20px;
+}
+footer section[aria-labelledby="footer-bottom"] > button img {
+  margin: 0;
+}
+footer h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+footer p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+footer form {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: start;
+  width: 120px;
+}
+
+/* footer features */
+section[aria-labelledby="features"] {
+  margin: 0;
+}
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.features-grid article {
+  text-align: center;
+}
+
+.features-grid img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.features-grid h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #0c64f7;
+}
+
+.features-grid p {
+  font-size: 14px;
+  color: #0c64f7;
+}
+.features-grid article span {
+  width: 20px;
+  font-size: 12px;
+  color: #96a0a6;
+}
+
+/* disclaimer */
+section[aria-labelledby="disclaimer"] {
+  margin: 0;
+}
+
+section[aria-labelledby="disclaimer"] > header {
+  background: var(--primary-color-light);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+section[aria-labelledby="disclaimer"] header > button {
+  margin: 0;
+  border: none;
+  background: var(--primary-color-light);
+}
+section[aria-labelledby="disclaimer"] header p {
+  color: #1e2d7d;
+  text-align: center;
+}
+section[aria-labelledby="disclaimer"] > p {
+  padding-top: 5px;
+  line-height: 2.5;
+  color: #000;
+  text-align: start;
+  column-gap: 10;
+  margin: 0;
+}
+
+#disclaimer {
+  border-radius: 5px;
+  margin: 0;
+  font-weight: 100%;
+}
+#disclaimer h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+#disclaimer p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* footer nav */
+
+footer nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+footer nav ul li {
+  margin: 15px 20px; /* Add vertical space between list items */
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #333; /* Example text color */
+  transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+  color: #007bff; /* Example hover color */
+}
+
+/* footer social media */
+footer .social-media,
+footer .payment-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+footer .social-media a,
+footer .payment-options img {
+    margin: 0 10px;
+}
+footer .social-media img,
+footer .payment-options img {
+  width: 30px;
+  height: 30px;
+}
+
+footer .social-media p,
+footer .payment-options p {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #333;
+}

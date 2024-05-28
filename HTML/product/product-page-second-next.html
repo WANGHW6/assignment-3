@@ -2,38 +2,53 @@
 <html lang="en">
 
 <head>
+    <!-- Sets the character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Ensures the webpage is responsive and adapts to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="../../style/root.css">
 </head>
 
 <body>
+    <!-- Header section with navigation -->
     <header>
         <nav>
+            <!-- Logo -->
             <div>
                 <img src="/assets/images/logo.png" alt="Games We Played Logo">
             </div>
+            <!-- Navigation links -->
             <ul>
-                <li><a href="#playstation">PlayStation</a></li>
+                <li><a href="/index.html">PlayStation</a></li>
                 <li><a href="#xbox">Xbox</a></li>
                 <li><a href="#switch">Switch</a></li>
                 <li><a href="#controllers">Controllers</a></li>
                 <li><a href="#storage">Storage</a></li>
             </ul>
+            <!-- Search bar -->
+            <div class="search-container">
+                <form action="/html/search/search-result-page.html">
+                    <input type="search" placeholder="Search" class="search-input">
+                    <button type="submit" class="search-button">
+                        <img src="/assets/icons/search-svgrepo-com.svg" alt="Search">
+                    </button>
+                </form>
+           </div>
+            <!-- User profile, favorites, and cart icons -->
             <div>
-                <input type="search" placeholder="Search">
-                <button>
-                    <img src="/assets/icons/search-svgrepo-com.svg" alt="">
-                </button>
-            </div>
-            <div>
-                <a href="#profile"><img src="/assets/icons/profile.svg" alt="Profile"></a>
-                <a href="#favorites"><img src="/assets/icons/favorite.svg" alt="Favorites"></a>
-                <a href="#cart"><img src="/assets/icons/cart-marked.svg" alt="Cart"></a>
+                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;" alt="Profile"></a>
+                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;" alt="Favorites"></a>
+                <a href="/html/payment/view-cart.html"><img src="/assets/icons/cart-marked.svg" style="width: 35px; height: 40px;" alt="Cart"></a>
             </div>
         </nav>
     </header>
+
+    <!-- Main content area -->
     <main>
+        <!-- Cart summary section -->
         <section aria-labelledby="cart-summary">
             <header>
                 <h2 id="cart-summary">YOUR CART – 1 items total</h2>
@@ -74,6 +89,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Showcase section -->
         <section class="showcase">
             <article>
                 <img src="/assets/images/product-bg-banner2.png" alt="Sifu Game Background">
@@ -88,10 +105,9 @@
                     </div>
                     <p><strong>What is Sifu?</strong></p>
                     <p>A very fun action adventure game, where players are the only surviving members of the family. In
-                        order to seek revenge, they constantly practice and master the art of
-                        kung fu, constantly learning from mistakes and failures. With each death, their age increases by
-                        one year, and the older they get,
-                        the stronger the player becomes.</p>
+                        order to seek revenge, they constantly practice and master the art of kung fu, constantly
+                        learning from mistakes and failures. With each death, their age increases by one year, and the
+                        older they get, the stronger the player becomes.</p>
                     <div class="add-to-cart">
                         <button aria-label="Add to Cart">
                             added <img src="/assets/icons/cart.svg" alt="Cart">
@@ -114,16 +130,17 @@
             </article>
         </section>
 
-        <!----------------------------------------------------------------------------------------------- New Release Section --------------------------------------------------------------->
+        <!-- New Release Section -->
         <section aria-labelledby="new-release">
             <header>
                 <h2 id="new-release">NEW RELEASE</h2>
                 <button>
-                    <img src="/assets/icons/right-icon.svg" alt="">
+                    <img src="/assets/icons/right-icon.svg" alt="Right icon">
                 </button>
             </header>
             <h3>What's hot!</h3>
             <div class="game-grid">
+                <!-- New release game -->
                 <article>
                     <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                     <h4>Final Fantasy XVI</h4>
@@ -131,13 +148,14 @@
                     <p>8.4/10</p>
                     <div class="actions">
                         <button aria-label="Add Final Fantasy XVI to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="/assets/icons/like.svg" alt="Like button">
                         </button>
                         <button aria-label="Add Final Fantasy XVI to cart">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="/assets/icons/cart.svg" alt="Cart icon">
                         </button>
                     </div>
                 </article>
+                <!-- Additional new release games follow the same structure -->
                 <article>
                     <img src="/assets/images/Call of duty.png" alt="Call of Duty: Modern Warfare III">
                     <h4>Call of Duty: Modern Warfare III</h4>
@@ -145,10 +163,10 @@
                     <p>8.4/10</p>
                     <div class="actions">
                         <button aria-label="Add Call of Duty: Modern Warfare III to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="/assets/icons/like.svg" alt="Like button">
                         </button>
                         <button aria-label="Add Call of Duty: Modern Warfare III to cart">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="/assets/icons/cart.svg" alt="Cart icon">
                         </button>
                     </div>
                 </article>
@@ -159,10 +177,10 @@
                     <p>8.4/10</p>
                     <div class="actions">
                         <button aria-label="Add Marvel's Spider-Man 2 to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="/assets/icons/like.svg" alt="Like button">
                         </button>
                         <button aria-label="Add Marvel's Spider-Man 2 to cart">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="/assets/icons/cart.svg" alt="Cart icon">
                         </button>
                     </div>
                 </article>
@@ -173,10 +191,10 @@
                     <p>8.4/10</p>
                     <div class="actions">
                         <button aria-label="Add Rise of the Ronin to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="/assets/icons/like.svg" alt="Like button">
                         </button>
                         <button aria-label="Add Rise of the Ronin to cart">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="/assets/icons/cart.svg" alt="Cart icon">
                         </button>
                     </div>
                 </article>
@@ -184,8 +202,10 @@
         </section>
 
     </main>
-    <!--------------------------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------>
+
+    <!-- Footer section -->
     <footer>
+        <!-- Join us section -->
         <section aria-labelledby="join-us">
             <h2 id="join-us">JOIN US!</h2>
             <p>Subscribe now and be the first to know about <strong>Exclusive Offers - Deals - Sales - New Releases and
@@ -195,13 +215,16 @@
                 <button type="submit">Subscribe</button>
             </form>
         </section>
+        <!-- Features section -->
         <section aria-labelledby="features">
             <div class="features-grid">
+                <!-- Feature -->
                 <article>
                     <img src="/assets/icons/top-notch support.svg" alt="Top-notch support">
                     <h3>Top-notch support</h3>
                     <p>Years of experience in customer service.</p>
                 </article>
+                <!-- Additional features follow the same structure -->
                 <article>
                     <img src="/assets/icons/shipping internationally.svg" alt="Shipping Internationally">
                     <h3>Shipping Internationally</h3>
@@ -219,22 +242,24 @@
                 </article>
             </div>
         </section>
+        <!-- Disclaimer section -->
         <section aria-labelledby="disclaimer">
             <header>
                 <h2 id="disclaimer">DISCLAIMER</h2>
                 <button>
-                    <img src="/assets/icons/plus-icon.svg" alt="">
+                    <img src="/assets/icons/plus-icon.svg" alt="Plus icon">
                 </button>
             </header>
             <p>
                 Please note that games and genuine products are all preowned and have previously been used unless
                 otherwise stated. Some scuffs and scratches from use are likely.
-                Images in product description is a general indication and not necessarily an exact image. Brand New
+                Images in product description is a general indication and not necessarily an exact image. Brand New
                 and/or sealed items will not be tested.
                 Please refer to our refunds policy.
             </p>
         </section>
-        <button><img src="/assets/icons/plus-icon.svg" alt=""></button>
+        <button><img src="/assets/icons/plus-icon.svg" alt="Plus icon"></button>
+        <!-- Navigation links in the footer -->
         <nav>
             <ul>
                 <li><a href="#about-us">ABOUT US</a></li>
@@ -249,16 +274,19 @@
                 <li><a href="#tos">TOS</a></li>
             </ul>
         </nav>
+        <!-- Social media links -->
         <div class="social-media">
             <p>Follow Us</p>
             <a href="#"><img src="/assets/icons/facebook.svg" alt="Facebook"></a>
             <a href="#"><img src="/assets/icons/instagram.svg" alt="Instagram"></a>
         </div>
+        <!-- Payment options -->
         <div class="payment-options">
             <p>We Accept</p>
             <img src="/assets/icons/s-payment.svg" alt="Payment Options">
-            <img src="/assets/icons/paypal.svg" alt="paypal-icon">
+            <img src="/assets/icons/paypal.svg" alt="Paypal">
         </div>
+        <!-- Copyright notice -->
         <p>© 2024 Games We Played</p>
     </footer>
 </body>
