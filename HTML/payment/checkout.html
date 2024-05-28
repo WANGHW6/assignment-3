@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="/assets/images/logo.png" alt="Games We Played Logo">
+            </div>
+            <ul>
+                <li><a href="/index.html">PlayStation</a></li>
+                <li><a href="#xbox">Xbox</a></li>
+                <li><a href="#switch">Switch</a></li>
+                <li><a href="#controllers">Controllers</a></li>
+                <li><a href="#storage">Storage</a></li>
+            </ul>
+            <div>
+                <input type="search" placeholder="Search">
+                <button>
+                    <img src="/assets/icons/search-svgrepo-com.svg" alt="">
+                </button>
+            </div>
+            <div>
+                <a href="#profile"><img src="/assets/icons/profile.svg" alt="Profile"></a>
+                <a href="#favorites"><img src="/assets/icons/favorite.svg" alt="Favorites"></a>
+                <a href="#cart"><img src="/assets/icons/cart-marked.svg" alt="Cart"></a>
+            </div>
+        </nav>
+    </header>
+    <!---------------------------------------------------------------------------------------------- main ---------------------------------------------------------------------------------->
+    <main>
+        <!-----------------------------------------------------------------------------------------Payment success popup page-------------------------------------------------------------------->
+        <section aria-labelledby="success-popup-page">
+            <section aria-labelledby="payment-success">
+                <h2 id="payment-success">Payment success, thank you for shopping !</h2>
+                <div class="order-summary">
+                    <div class="order-items">
+                        <article>
+                            <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                            <div>
+                                <h3>Final Fantasy XVI</h3>
+                                <p>PS5 video game</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/payment-card-image.png" alt="SIFU">
+                            <div>
+                                <h3>SIFU</h3>
+                                <p>PS5 video game</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
+                            <div>
+                                <h3>Rise of the Ronin</h3>
+                                <p>PS5 video game</p>
+                            </div>
+                        </article>
+                        <div class="delivery-info">
+                            <p>Delivering to:</p>
+                            <p id="delivery-address">1234 Main Street City, State12345</p>
+                            <p>Estimated delivery: 25/05</p>
+                        </div>
+                    </div>
+
+                    <div class="invoice-details">
+                        <h3>Invoice</h3>
+                        <p>Number: INV-49535-23-1234</p>
+                        <p>Date: 19/05/2024</p>
+
+                        <h4>Seller</h4>
+                        <p>123 Main Street City, State12345</p>
+                        <p>Phone: 555-555-1234</p>
+
+                        <h4>Buyer</h4>
+                        <p>813 Howard Street Oswego, NY 13126 USA</p>
+
+                        <h4>Item</h4>
+                        <p>Final Fantasy XVI<br>Price: $69</p>
+                        <p>SIFU<br>Price: $69</p>
+                        <p>Call of Duty: Modern Warfare III<br>Price: $69</p>
+
+                        <p>Shipping: FREE</p>
+                        <p>Total: $211</p>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="button" onclick="location.href='continue-shopping.html'">Keep shopping</button>
+                </div>
+            </section>
+        </section>
+        <h2>Check out</h2>
+        <nav aria-label="breadcrumb">
+            <ul>
+                <li><a href="#cart">cart</a></li>
+                <li><a href="#information">information</a></li>
+                <li><a href="#shipping">shipping</a></li>
+                <li><a href="#payment">payment</a></li>
+            </ul>
+        </nav>
+
+        <div class="checkout-container">
+            <div class="infos">
+                <section aria-labelledby="contact-section">
+                    <h3 id="contact-section">Contact</h3>
+                    <form>
+                        <fieldset>
+                            <legend>Card type</legend>
+                            <div class="card-types">
+                                <img src="/assets/images/mastercard.png" alt="MasterCard">
+                                <img src="/assets/images/visa.png" alt="Visa">
+                                <img src="/assets/images/RuPay.png" alt="RuPay">
+                                <a href="#see-all">See all</a>
+                            </div>
+                            <p>Already have an account? <a href="#login">Log in</a></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Your email</legend>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Name" required>
+                            <div>
+                                <input type="checkbox" id="subscribe" name="subscribe">
+                                <label for="subscribe">Email me with news and offers</label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Shipping address</legend>
+                            <label for="country">Country/Region</label>
+                            <select id="country" name="country" required>
+                                <option value="">Country/Region</option>
+                                <option value="Australia">Australia</option>
+                                <option value="China">China</option>
+                                <option value="France">France</option>
+                                <option value="Greek">Greek</option>
+                                <option value="India">India</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Japan">Japan</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="United States">United States</option>
+                                <option value="South Korea">South Korea</option>
+                                <option value="Vietnam">Vietnam</option>
+                            </select>
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="City" required>
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" placeholder="State" required>
+                            <label for="postcode">Postcode</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="Postcode" required
+                                pattern="\d{4,4}" title="Please enter only 4 digits" required>
+                            <label for="first-name">First name(optional)</label>
+                            <input type="text" id="firstname" name="first-name" placeholder="First name">
+                            <label for="Last-name">*Last name</label>
+                            <input type="text" id="lastname" name="Last-name" placeholder="Last name" required>
+                            <label class="form_adjust" for="phone">Phone (optional)</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9 +-]+"
+                                title="Please enter only digits, hyphen and plus sign for your region">
+                            <label for="name-on-card">Name on card</label>
+                            <input type="text" id="name-on-card" name="name-on-card" placeholder="Name" required>
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
+                        </fieldset>
+                    </form>
+                </section>
+
+                <aside aria-labelledby="order-summary">
+                    <h3 id="order-summary">Order summary</h3>
+                    <ul>
+                        <li>
+                            <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                            <div>
+                                <p>Final Fantasy XVI</p>
+                                <p>PS5 video game</p>
+                                <p>$69</p>
+                                <div class="quantity">
+                                    <button aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1">
+                                    <button aria-label="Increase quantity">+</button>
+                                </div>
+                                <button aria-label="Remove item">
+                                    <img src="/assets/icons/bin.svg" alt="">
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/assets/images/payment-card-image.png" alt="SIFU">
+                            <div>
+                                <p>SIFU</p>
+                                <p>PS5 video game</p>
+                                <p>$69</p>
+                                <div class="quantity">
+                                    <button aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1">
+                                    <button aria-label="Increase quantity">+</button>
+                                </div>
+                                <button aria-label="Remove item">
+                                    <img src="/assets/icons/bin.svg" alt="">
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
+                            <div>
+                                <p>Call of Duty: Modern Warfare III</p>
+                                <p>PS5 video game</p>
+                                <p>$69</p>
+                                <div class="quantity">
+                                    <button aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1">
+                                    <button aria-label="Increase quantity">+</button>
+                                </div>
+                                <button aria-label="Remove item">
+                                    <img src="/assets/icons/bin.svg" alt="">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <form>
+                        <label for="discount-code">Gift card discount code</label>
+                        <input type="text" id="discount-code" name="discount-code"
+                            placeholder="Gift card discount code">
+                        <button type="submit">➔</button>
+                    </form>
+                    <div class="order-totals">
+                        <p>Subtotal: $207</p>
+                        <p>Shipping: Calculated after filling shipping address</p>
+                        <p>Total: AUD$211</p>
+                        <p>Including $4 in taxes</p>
+                        <button type="submit">Continue to shipping</button>
+                    </div>
+                </aside>
+            </div>
+            <div class="method">
+                <section aria-labelledby="shipping-info">
+                    <h2 id="shipping-info">Shipping Information</h2>
+                    <div>
+                        <div>
+                            <h3>Contact</h3>
+                            <p id="user_email">peferctnature@gmail.com</p>
+                        </div>
+                        <button type="button">Change</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h3>Ship to</h3>
+                            <p id="user_address">LeCoq, France beauville</p>
+                        </div>
+                        <button type="button">Change</button>
+                    </div>
+
+                    <div class="paymentPage">
+                        <div>
+                            <h3>Method</h3>
+                            <p id="shipping_standard">Standard - <span>FREE</span></p>
+                            <p id="shipping_express">Express - <span>$4</span></p>
+                        </div>
+                        <button type="button">Change</button>
+                    </div>
+                </section>
+                <aside aria-labelledby="order-summary">
+                    <h3 id="order-summary">Order summary</h3>
+                    <ul>
+                        <li>
+                            <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                            <div>
+                                <p>Final Fantasy XVI</p>
+                                <p>PS5 video game</p>
+                                <p>$69</p>
+                                <div class="quantity">
+                                    <button aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1">
+                                    <button aria-label="Increase quantity">+</button>
+                                </div>
+                                <button aria-label="Remove item">
+                                    <img src="/assets/icons/bin.svg" alt="">
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/assets/images/payment-card-image.png" alt="SIFU">
+                            <div>
+                                <p>SIFU</p>
+                                <p>PS5 video game</p>
+                                <p>$69</p>
+                                <div class="quantity">
+                                    <button aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1">
+                                    <button aria-label="Increase quantity">+</button>
+                                </div>
+                                <button aria-label="Remove item">
+                                    <img src="/assets/icons/bin.svg" alt="">
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
+                            <div>
+                                <p>Call of Duty: Modern Warfare III</p>
+                                <p>PS5 video game</p>
+                                <p>$69</p>
+                                <div class="quantity">
+                                    <button aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1">
+                                    <button aria-label="Increase quantity">+</button>
+                                </div>
+                                <button aria-label="Remove item">
+                                    <img src="/assets/icons/bin.svg" alt="">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <form>
+                        <label for="discount-code">Gift card discount code</label>
+                        <input type="text" id="discount-code" name="discount-code"
+                            placeholder="Gift card discount code">
+                        <button type="submit">➔</button>
+                    </form>
+                    <div class="order-totals">
+                        <p>Subtotal: $207</p>
+                        <p>Shipping: Calculated after filling shipping address</p>
+                        <p>Total: AUD$211</p>
+                        <p>Including $4 in taxes</p>
+                        <button type="submit">Continue to payment</button>
+                    </div>
+                </aside>
+            </div>
+            <div class="payment">
+                <section aria-labelledby="shipping-info">
+                    <h2 id="shipping-info">Shipping Information</h2>
+                    <div>
+                        <div>
+                            <h3>Contact</h3>
+                            <p id="user_email">peferctnature@gmail.com</p>
+                        </div>
+                        <button type="button">Change</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h3>Ship to</h3>
+                            <p id="user_address">LeCoq, France beauville</p>
+                        </div>
+                        <button type="button">Change</button>
+                    </div>
+
+                    <div class="paymentPage">
+                        <div>
+                            <h3>Method</h3>
+                            <p id="shipping_standard">Standard - <span>FREE</span></p>
+                        </div>
+                        <button type="button">Change</button>
+                    </div>
+                </section>
+                <section aria-labelledby="payment-section">
+                    <h2 id="payment-section">Payment</h2>
+                    <p>All transactions are secure and encrypted</p>
+
+                    <form>
+                        <fieldset>
+                            <legend>Payment Method</legend>
+
+                            <div>
+                                <input type="radio" id="credit-card" name="payment-method" value="credit-card" checked>
+                                <label for="credit-card">Credit card</label>
+                                <div class="card-icons">
+                                    <img src="/assets/images/mastercard.png" alt="MasterCard">
+                                    <img src="/assets/images/visa.png" alt="Visa">
+                                    <img src="/assets/images/RuPay.png" alt="RuPay">
+                                    <a href="#see-all">See all</a>
+                                </div>
+
+                                <div>
+                                    <label for="card-number">Card number</label>
+                                    <input type="text" id="card-number" name="card-number" required>
+                                </div>
+
+                                <div>
+                                    <label for="name-on-card">Name on card</label>
+                                    <input type="text" id="name-on-card" name="name-on-card" required>
+                                </div>
+
+                                <div>
+                                    <label for="expiration-date">Expiration date</label>
+                                    <input type="text" id="expiration-date" name="expiration-date" required>
+
+                                    <label for="security-code">Security code</label>
+                                    <input type="text" id="security-code" name="security-code" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="paypal" name="payment-method" value="paypal">
+                                <label for="paypal">Paypal</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="purchase-order" name="payment-method" value="purchase-order">
+                                <label for="purchase-order">Purchase order</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Remember me</legend>
+                            <div>
+                                <input type="checkbox" id="remember-me" name="remember-me">
+                                <label for="remember-me">Save my information for a faster checkout</label>
+                            </div>
+                        </fieldset>
+
+                        <a href="#return-to-shipping">Return to shipping</a>
+                    </form>
+                </section>
+                <aside aria-labelledby="order-summary">
+                    <h3 id="order-summary">Order summary</h3>
+                    <ul>
+                        <li>
+                            <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                            <div>
+                                <p>Final Fantasy XVI</p>
+                                <p>PS5 video game</p>
+                                <p>$69</p>
+                                <div class="quantity">
+                                    <button aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1">
+                                    <button aria-label="Increase quantity">+</button>
+                                </div>
+                                <button aria-label="Remove item">
+                                    <img src="/assets/icons/bin.svg" alt="">
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/assets/images/payment-card-image.png" alt="SIFU">
+                            <div>
+                                <p>SIFU</p>
+                                <p>PS5 video game</p>
+                                <p>$69</p>
+                                <div class="quantity">
+                                    <button aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1">
+                                    <button aria-label="Increase quantity">+</button>
+                                </div>
+                                <button aria-label="Remove item">
+                                    <img src="/assets/icons/bin.svg" alt="">
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
+                            <div>
+                                <p>Call of Duty: Modern Warfare III</p>
+                                <p>PS5 video game</p>
+                                <p>$69</p>
+                                <div class="quantity">
+                                    <button aria-label="Decrease quantity">-</button>
+                                    <input type="number" value="1">
+                                    <button aria-label="Increase quantity">+</button>
+                                </div>
+                                <button aria-label="Remove item">
+                                    <img src="/assets/icons/bin.svg" alt="">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <form>
+                        <label for="discount-code">Gift card discount code</label>
+                        <input type="text" id="discount-code" name="discount-code"
+                            placeholder="Gift card discount code">
+                        <button type="submit">➔</button>
+                    </form>
+                    <div class="order-totals">
+                        <p>Subtotal: $207</p>
+                        <p>Shipping: Calculated after filling shipping address</p>
+                        <p>Total: AUD$211</p>
+                        <p>Including $4 in taxes</p>
+                        <button type="submit">Proceed payment</button>
+                    </div>
+                </aside>
+            </div>
+
+        </div>
+
+
+    </main>
+</body>
+
+</html>
