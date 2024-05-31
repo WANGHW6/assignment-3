@@ -3,4 +3,9 @@
     --on-primary-color: #FFFFFF;
     --primary-color-light: #F9E9EC;
     --secondary-color: #7C1C19;
+    --gray-color-second: #796f6f;
+    --available-stock-color: #cf6e38;
+    --main-content-h2: 3em;
+    --main-title-size: 20px;
+    --main-normal-text-size: 16px;
 }

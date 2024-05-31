@@ -10,11 +10,16 @@ body {
 }
 
 /* Header */
-header {
+body > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #fff;
     padding: 20px 10px;
     border-bottom: 1px solid #ddd;
     overflow-x: hidden;
+    z-index: 1000;
 }
 
 header nav {
@@ -83,7 +88,7 @@ header nav ul li:first-child a {
     padding: 10px;
     border-radius: 50px 0 0 50px;
     outline: none;
-    font-size: 16px;
+    font-size:var(--main-normal-text-size)
     width: 200px; /* Adjust width as needed */
     background-color: transparent;
 }

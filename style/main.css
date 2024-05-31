@@ -1,8 +1,15 @@
 /* Main Showcase */
+main{
+    margin: 20px;
+
+}
+a{
+    text-decoration: none;
+}
 .showcase {
     background-color: #f8f8f8;
-    padding: 20px 0;
     text-align: center;
+    margin-top: 55px;
 }
 
 .showcase article {
@@ -14,64 +21,379 @@
     height: auto;
 }
 
-.showcase .content {
+main .showcase .content {
+    width: 98%;
+    height: 200px;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 150px;
     color: #fff;
     text-align: left;
-}
-
-.showcase .content h2 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.showcase .content p {
-    margin-bottom: 10px;
-}
-
-.showcase .content .price-like {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
+.showcase .content > .first-content{
+    width: 100%;
+    height: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
 
-.showcase .content .price-like span {
-    font-size: 2em;
-    margin-right: 10px;
 }
+.showcase .content .first-content > h2{
+    font-size: var(--main-content-h2);
+    width: 120px;
+    margin: 0;
+    padding: 0;
 
-.showcase .content .price-like button {
+}
+.showcase .content > .first-content p{
+    margin: 0;
+    padding: 0;
+    font-size: var(--main-title-size);
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 7px;
+}
+.showcase .content .first-content > .price-like{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: var(--main-normal-text-size);
+    justify-content: flex-end;
+    margin: 0 0 0 10%;
+}
+.showcase .content .first-content .price-like > span {
+    background: var(--gray-color-second);
+    padding: 5px 15px;
+    font-size: var(--main-title-size);
+    margin-right: 30px;
+    border-radius: 15px;
+}
+.showcase .content .first-content .price-like button {
     background: none;
     border: none;
     cursor: pointer;
 }
+.showcase .content .first-content .price-like [aria-label="Like"] img{
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    height: 35px;
+}
+.showcase .content > .first-content .space{
+    width: 50vw;
+}
+.showcase .content > .first-content .add-to-cart{
 
-.showcase .content .add-to-cart button {
-    background-color: #ff0000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 90%;
+    padding: 0;
+    background: var(--secondary-color);
+    border-radius: 20px;
+
+}
+.showcase .content ,.first-content .add-to-cart > button{
+    all: initial;
+    margin: 10px;
+    padding: 2px;
+    height: 80%;
+    width: 150px;
+}
+
+
+.showcase .content .first-content .add-to-cart button > a{
+    height: 70%;
+    width: 150px;
     color: #fff;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
+    margin: 0 10px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: var(--main-normal-text-size);
+    text-decoration: none;
+    font-weight: 1000;
+
+}
+.showcase .content ,.first-content .add-to-cart > button img{
+    width: 25px;
+    height: 25px;
+}
+.showcase .content .second-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.showcase .content .second-content .second-content-header{
+    margin: 0;
+    padding: 10px;
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.showcase .content .second-content .second-content-header span{
+    margin: 0 0 10px 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+
+}
+.showcase .content .second-content .second-content-header p{
+    line-height: 22px;
+}
+.showcase .content .second-content .scenes{
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    margin-top: 20px;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+
+}
+.showcase .content .second-content .scenes figcaption{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+.showcase .content .second-content .scenes > .all-figures{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+.showcase .content .scenes .all-figures figure{
+    margin: 0;
+}
+
+.showcase .content .scenes .all-figures figure > img {
+    width: 224px;
+    height: 150px;
+    border-radius: 30px 0 0 30px;
+   
+}
+.showcase .content .scenes .all-figures figure > .rounded{
+     border-radius: 30px;
+}
+
+section[aria-labelledby="featured-games"] .horizontal-slider{
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+section[aria-labelledby="featured-games"] .horizontal-slider article{
+    flex: 0 0 auto;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+section[aria-labelledby="featured-games"] .horizontal-slider article > img {
+    width: 400px;
+    height: 300px;
+} 
+section[aria-labelledby="featured-games"] .horizontal-slider .description {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+   
+}
+
+section[aria-labelledby="featured-games"] .horizontal-slider .description button {
+    width: 100%;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    text-align: start;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+section[aria-labelledby="featured-games"] .horizontal-slider .description button > p{
+    margin: 0;
+    width: 90%;
+    height: 100%;
+    background: #fff;
+    text-align: start;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    font-weight: 1000;
+
+}
+section[aria-labelledby="featured-games"] .horizontal-slider  .description button > img {
+    width: 50px;
+    height: 50px;
+}
+
+section[aria-labelledby="new-release"] > header {
+    background: #b6b2af;
+    margin: 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #fff;
+}
+section[aria-labelledby="new-release"] header > h2{
+    margin: 0;
+    padding: 0;
+    font-size: var(--main-title-size);
+    display: flex;
+    align-items: center;
+
+}
+section[aria-labelledby="new-release"] header > img{
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+}
+section[aria-labelledby="new-release"] > .grid-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+section[aria-labelledby="new-release"] .grid-header h3{
+    margin: 0;
+    padding: 0;
+    font-size: var(--main-title-size);
+    font-weight: 1000;
+}
+section[aria-labelledby="new-release"] .grid-header a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-size: var(--main-normal-text-size);
+    color: var(--gray-color-second);
+}
+
+/* Game grid styles */
+.game-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Game card styles */
+.game-grid article {
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.game-grid article:hover {
+    transform: translateY(-5px);
+}
+
+.game-grid article img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.game-grid article h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.game-grid article p {
+    margin-bottom: 5px;
+    color: #777;
+}
+.game-grid article .price{
+    width: 100%;
+    display: flex;
+}
+.game-grid article .price strong{
+    color: var( --available-stock-color);
+}
+
+.game-grid .actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     margin-top: 10px;
 }
 
-.showcase .content .scenes {
+.game-grid .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
-    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s;
 }
 
-.showcase .content .scenes figure {
-    margin-right: 10px;
+.game-grid .actions button:hover {
+    background-color: #f0f0f0;
 }
 
-.showcase .content .scenes img {
-    width: 100px;
-    height: auto;
+.game-grid .actions button img {
+    width: 20px;
+    height: 20px;
 }
+
+
+
+
+
+/*
+section[aria-labelledby="featured-games"] .horizontal-slider .description button:hover {
+    background-color: darken(#ff0000, 10%);
+}
+
+section[aria-labelledby="featured-games"] .horizontal-slider .description button img {
+    margin-right: 5px;
+}
+
+section[aria-labelledby="featured-games"] .horizontal-slider .description p {
+    margin-top: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+} */
+
 
 /* Sections */
-section {
+/* section {
     padding: 40px 20px;
 }
 
@@ -135,4 +457,100 @@ section h3 {
     border: none;
     cursor: pointer;
     margin: 0 5px;
+} */
+
+.scenes {
+
+}
+
+.scenes figcaption {
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: left; /* Align text to the left */
+    padding-left: 12px; /* Optional: Add padding to align with images */
+}
+
+.scrollable-container {
+    overflow-x: auto;
+    display: flex;
+    width: 100%;
+}
+
+.all-figures {
+    display: flex;
+    gap: 10px; /* Adjust the gap to reduce spacing between images */
+    padding-left: 12px; /* Optional: Add padding to align with figcaption */
+    width: 100%;
+}
+
+.all-figures figure {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.all-figures figure img {
+    width: 224px;
+    height: 150px;
+    border-radius: 30px;
+}
+
+
+.first-content h2 {
+    font-size: var(--main-content-h2);
+    width: 120px;
+    margin: 0;
+    padding: 0;
+}
+
+.first-content .platforms {
+    display: inline-block; /* Ensures it remains on one line */
+    margin-left: 20px; /* Adds space between SIFU and steam switch */
+    white-space: nowrap; /* Prevents line break */
+    font-size: var(--main-title-size);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 7px;
+}
+
+.add-to-cart {
+
+}
+.add-to-cart-two{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 90%;
+    padding: 0;
+    background: var(--secondary-color);
+    border-radius: 20px;
+}
+
+.add-to-cart button {
+    all: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    padding: 0 20px; /* Add padding for left and right sides */
+    background: var(--secondary-color);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.add-to-cart button a {
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--main-normal-text-size);
+    font-weight: 1000;
+    padding: 0 10px; /* Add padding to ensure even spacing within the button */
+}
+
+.add-to-cart button img {
+   
 }
