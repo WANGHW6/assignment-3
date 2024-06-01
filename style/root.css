@@ -1,5 +1,8 @@
-:root{
-    --primary-color : #F43756;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+:root {
+    --primary-color: #F43756;
     --on-primary-color: #FFFFFF;
     --primary-color-light: #F9E9EC;
     --secondary-color: #7C1C19;
@@ -8,4 +11,15 @@
     --main-content-h2: 3em;
     --main-title-size: 20px;
     --main-normal-text-size: 16px;
+    --font-family: 'Poppins', sans-serif;
+    --color-dark: #333;
+    --color-gray: #777;
+    --color-light: #fff;
+    --color-dark-gray: #5D5D5D;
+    --color-medium-gray: #ddd;
+    --color-highlight: #fd803e;
+    --background-light: #f4f5f7;
+    --background-dark: #000;
+    --background-gray: #f8f8f8;
+    --background-highlight: #ffeef2;
 }

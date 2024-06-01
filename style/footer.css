@@ -1,6 +1,6 @@
 footer {
-  font-family: Arial, sans-serif;
-  color: #333;
+  font-family: var(--font-family);
+  color: var(--color-dark);
   background: var(--primary-color-light);
 }
 
@@ -13,7 +13,7 @@ footer section[aria-labelledby="join-us"] {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  background: #000;
+  background: var(--background-dark);
   padding: 50px 100px;
   margin: 0;
   width: 100%;
@@ -44,10 +44,10 @@ footer section[aria-labelledby="join-us"] form button {
   padding: 10px 20px;
   border: none;
   background-color: #e63946;
-  color: white;
+  color: var(--color-light);
   border-radius: 5px;
   cursor: pointer;
-  font-size:var(--main-normal-text-size);
+  font-size: var(--main-normal-text-size);
 }
 
 /* footer-bottom */
@@ -76,7 +76,7 @@ footer h2 {
 }
 
 footer p {
-  font-size:var(--main-normal-text-size);
+  font-size: var(--main-normal-text-size);
   line-height: 1.5;
 }
 
@@ -111,7 +111,7 @@ section[aria-labelledby="features"] {
 }
 
 .features-grid h3 {
-  font-size:var(--main-title-size);
+  font-size: var(--main-title-size);
   margin-bottom: 5px;
   color: #0c64f7;
 }
@@ -123,7 +123,7 @@ section[aria-labelledby="features"] {
 
 .features-grid article span {
   width: 20px;
-  font-size:var(--main-normal-text-size);
+  font-size: var(--main-normal-text-size);
   color: #96a0a6;
 }
 
@@ -170,7 +170,7 @@ section[aria-labelledby="disclaimer"] > p {
 }
 
 #disclaimer h2 {
-  font-size:var(--main-title-size);
+  font-size: var(--main-title-size);
   margin-bottom: 5px;
 }
 
@@ -226,7 +226,7 @@ section[aria-labelledby="footer-bottom-option"] .social-media p,
 section[aria-labelledby="footer-bottom-option"] .we-accept p {
   margin: 0 10px 0 0;
   color: #000;
-  font-size:var(--main-normal-text-size);
+  font-size: var(--main-normal-text-size);
 }
 
 section[aria-labelledby="footer-bottom-option"] .social-media img,

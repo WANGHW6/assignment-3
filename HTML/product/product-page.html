@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/footer.css">
-    <link rel="stylesheet" href="../../style/root.css">
+    <link rel="stylesheet" href="/style/root.css">
+    <script src="/js/cart.js"></script>
 </head>
 
 <body>
@@ -18,11 +19,15 @@
         <nav>
             <!-- Logo -->
             <div>
-                <img src="/assets/images/logo.png" alt="Games We Played Logo">
+                <!-- Logo container -->
+                <a href="/index.html">
+                    <img src="/assets/images/logo.png" alt="Games We Played Logo">
+                </a>
+                <!-- The website's logo -->
             </div>
             <!-- Navigation links -->
             <ul>
-                <li><a href="#playstation">PlayStation</a></li>
+                <li><a href="/index.html">PlayStation</a></li>
                 <li><a href="#xbox">Xbox</a></li>
                 <li><a href="#switch">Switch</a></li>
                 <li><a href="#controllers">Controllers</a></li>
@@ -39,15 +44,12 @@
             </div>
             <!-- User profile, favorites, and cart icons -->
             <div>
-                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;"
-                        alt="Profile"></a>
-                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;"
-                        alt="Favorites"></a>
-                <a href="#cart"><img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart"></a>
+                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;" alt="Profile"></a>
+                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;" alt="Favorites"></a>
+                <a href="/html/payment/view-cart.html"><img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart"></a>
             </div>
         </nav>
-    </header>
-
+    </header>    
     <!-- Main content area -->
     <main>
         <!-- Showcase section with product details -->
@@ -67,10 +69,10 @@
                         </div>
                         <div class="space"></div>
                         <div class="add-to-cart">
-                            <button aria-label="Add to Cart">
-                                <a href="./product-page-second.html">Add to Cart <img src="/assets/icons/cart-white.svg" alt="Cart"></a>
+                            <button aria-label="Add to Cart" onclick="toggleCart()">
+                                <a href="javascript:void(0);">Add to Cart <img src="/assets/icons/cart-white.svg" alt="Cart"></a>
                             </button>
-                        </div>                        
+                        </div>             
                     </div>
                     
                     <div class="second-content">
@@ -100,9 +102,7 @@
                                 </div>
                             </div>
                          </div>
-                         
                     </div>
-
                 </div>
             </article>
         </section>
@@ -129,15 +129,15 @@
                         </div>
                         <div class="actions">
                             <button aria-label="Add Final Fantasy XVI to favorites">
-                                <img src="/assets/icons/like.svg" alt="like-button">
+                                <img src="/assets/icons/like.svg" alt="Like button">
                             </button>
                             <button aria-label="Add Final Fantasy XVI to cart">
-                                <img src="/assets/icons/cart.svg" alt="cart-icon">
+                                <img src="/assets/icons/cart.svg" alt="Cart icon">
                             </button>
                         </div>
                     </article>
                 </a>
-                <!-- Additional game cards follow the same structure -->
+                <!-- Additional new release games follow the same structure -->
                 <article>
                     <img src="/assets/images/Call of duty.png" alt="Call of Duty: Modern Warfare III">
                     <h4>Call of Duty: Modern Warfare III</h4>
@@ -147,10 +147,10 @@
                     </div>
                     <div class="actions">
                         <button aria-label="Add Call of Duty: Modern Warfare III to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="/assets/icons/like.svg" alt="Like button">
                         </button>
                         <button aria-label="Add Call of Duty: Modern Warfare III to cart">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="/assets/icons/cart.svg" alt="Cart icon">
                         </button>
                     </div>
                 </article>
@@ -163,10 +163,10 @@
                     </div>
                     <div class="actions">
                         <button aria-label="Add Marvel's Spider-Man 2 to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="/assets/icons/like.svg" alt="Like button">
                         </button>
                         <button aria-label="Add Marvel's Spider-Man 2 to cart">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="/assets/icons/cart.svg" alt="Cart icon">
                         </button>
                     </div>
                 </article>
@@ -179,16 +179,15 @@
                     </div>
                     <div class="actions">
                         <button aria-label="Add Rise of the Ronin to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="/assets/icons/like.svg" alt="Like button">
                         </button>
                         <button aria-label="Add Rise of the Ronin to cart">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="/assets/icons/cart.svg" alt="Cart icon">
                         </button>
                     </div>
                 </article>
             </div>
         </section>
-
     </main>
 
     <!-- Footer section -->

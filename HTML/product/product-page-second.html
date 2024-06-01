@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/footer.css">
-    <link rel="stylesheet" href="../../style/root.css">
+    <link rel="stylesheet" href="/style/root.css">
+    <script src="/js/cart.js"></script>
 </head>
 
 <body>
@@ -18,7 +19,11 @@
         <nav>
             <!-- Logo -->
             <div>
-                <img src="/assets/images/logo.png" alt="Games We Played Logo">
+                <!-- Logo container -->
+                <a href="/index.html">
+                    <img src="/assets/images/logo.png" alt="Games We Played Logo">
+                </a>
+                <!-- The website's logo -->
             </div>
             <!-- Navigation links -->
             <ul>
@@ -47,10 +52,11 @@
     </header>
     <!-- Main content area -->
     <main>
-        <!-- Showcase section -->
+        <!-- Showcase section with product details -->
         <section class="showcase">
             <article>
-                <img src="/assets/images/product-bg-banner2.png" alt="Sifu Game Background">
+                <!-- Background image of the product -->
+                <img src="/assets/images/product-bg-banner2.png" alt="FFXVI Game Background">
                 <div class="content">
                     <div class="first-content">
                         <h2>FFXVI</h2>
@@ -62,10 +68,10 @@
                         </div>
                         <div class="space"></div>
                         <div class="add-to-cart">
-                            <button aria-label="Add to Cart">
-                                <a href="./product-page-second.html">Add to Cart <img src="/assets/icons/cart-white.svg" alt="Cart"></a>
+                            <button aria-label="Add to Cart" onclick="toggleCart()">
+                                <a href="javascript:void(0);">Add to Cart <img src="/assets/icons/cart-white.svg" alt="Cart"></a>
                             </button>
-                        </div>                        
+                        </div>                      
                     </div>
                     
                     <div class="second-content">
@@ -107,6 +113,7 @@
                 <a href="#see-more">See more</a>
             </div>
             <div class="game-grid">
+                <!-- Game card example with link to the product page -->
                 <a href="/html/product/product-page-second.html">
                     <article>
                         <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">

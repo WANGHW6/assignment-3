@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-     <!-- Sets the character encoding for the document -->
+    <!-- Sets the character encoding for the document -->
     <meta charset="UTF-8">
     <!-- Ensures the webpage is responsive and adapts to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,11 @@
         <nav>
             <!-- Logo -->
             <div>
-                <img src="/assets/images/logo.png" alt="Games We Played Logo">
+                <!-- Logo container -->
+                <a href="/index.html">
+                    <img src="/assets/images/logo.png" alt="Games We Played Logo">
+                </a>
+                <!-- The website's logo -->
             </div>
             <!-- Navigation links -->
             <ul>
@@ -39,99 +43,125 @@
             </div>
             <!-- User profile, favorites, and cart icons -->
             <div>
-                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;" alt="Profile"></a>
-                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;" alt="Favorites"></a>
-                <a href="#cart"><img src="/assets/icons/cart-marked.svg" style="width: 35px; height: 40px;" alt="Cart"></a>
+                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;"
+                        alt="Profile"></a>
+                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;"
+                        alt="Favorites"></a>
+                <a href="#cart"><img src="/assets/icons/cart-marked.svg" style="width: 35px; height: 40px;"
+                        alt="Cart"></a>
             </div>
         </nav>
     </header>
 
     <!-- Main content area -->
     <main>
-        <!-- Cart summary section -->
-        <section aria-labelledby="cart-summary">
-            <h2 id="cart-summary">Cart summary</h2>
-            <ul>
-                <!-- Cart item -->
-                <li>
-                    <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
-                    <div>
-                        <p>Final Fantasy XVI</p>
-                        <p>PS5 video game</p>
-                        <p>$69</p>
-                        <div class="quantity">
-                            <button aria-label="Decrease quantity">-</button>
-                            <input type="number" value="1">
-                            <button aria-label="Increase quantity">+</button>
+        <div class="cart-summary-container">
+            <!-- Cart summary section -->
+            <section aria-labelledby="cart-summary">
+                <h2 id="cart-summary">Cart summary</h2>
+                <hr>
+                <ul>
+                    <!-- Cart item -->
+                    <li>
+                        <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                        <div>
+                            <div class="cart-name">
+                                <span>Final Fantasy XVI</span>
+                                <p>PS5 video game</p>
+                            </div>
+                            <div class="quantity">
+                                <button aria-label="Decrease quantity">-</button>
+                                <span>1</span>
+                                <button aria-label="Increase quantity">+</button>
+                            </div>
+                            <p>$69</p>
+                            <button aria-label="Remove item">
+                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                            </button>
                         </div>
-                        <button aria-label="Remove item">
-                            <img src="/assets/icons/bin.svg" alt="Remove item icon">
-                        </button>
-                    </div>
-                </li>
-                <!-- Additional cart items follow the same structure -->
-                <li>
-                    <img src="/assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
-                    <div>
-                        <p>Rise of the Ronin</p>
-                        <p>PS5 video game</p>
-                        <p>$69</p>
-                        <div class="quantity">
-                            <button aria-label="Decrease quantity">-</button>
-                            <input type="number" value="1">
-                            <button aria-label="Increase quantity">+</button>
+                    </li>
+                    <!-- Additional cart items follow the same structure -->
+                    <li>
+                        <img src="/assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
+                        <div>
+                            <div class="cart-name">
+                                <span>Rise of the Ronin</span>
+                                <p>PS5 video game</p>
+                            </div>
+                            <div class="quantity">
+                                <button aria-label="Decrease quantity">-</button>
+                                <span>5</span>
+                                <button aria-label="Increase quantity">+</button>
+                            </div>
+                            <p>$69</p>
+                            <button aria-label="Remove item">
+                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                            </button>
                         </div>
-                        <button aria-label="Remove item">
-                            <img src="/assets/icons/bin.svg" alt="Remove item icon">
-                        </button>
-                    </div>
-                </li>
-                <li>
-                    <img src="/assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
-                    <div>
-                        <p>Call of Duty: Modern Warfare III</p>
-                        <p>PS5 video game</p>
-                        <p>$69</p>
-                        <div class="quantity">
-                            <button aria-label="Decrease quantity">-</button>
-                            <input type="number" value="1">
-                            <button aria-label="Increase quantity">+</button>
+                    </li>
+                    <li>
+                        <img src="/assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
+                        <div>
+                            <div class="cart-name">
+                                <span>Call of Duty: Modern Warfare III</span>
+                                <p>PS5 video game</p>
+                            </div>
+                            <div class="quantity">
+                                <button aria-label="Decrease quantity">-</button>
+                                <span>1</span>
+                                <button aria-label="Increase quantity">+</button>
+                            </div>
+                            <p>$169</p>
+                            <button aria-label="Remove item">
+                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                            </button>
                         </div>
-                        <button aria-label="Remove item">
-                            <img src="/assets/icons/bin.svg" alt="Remove item icon">
-                        </button>
-                    </div>
-                </li>
-            </ul>
-            <!-- Note about discount code -->
-            <p>*If you have a discount code you can enter it in the next step</p>
-            <!-- Note about product availability -->
-            <p>Changing the product quantity in your cart may change the availability of the product for delivery or
-                Click & Collect, including availability in a specific store. Please review your products on the Checkout
-                page to avoid disappointment.</p>
-        </section>
+                    </li>
+                </ul>
+                <!-- Note about discount code -->
+                <p>*If you have a discount code you can enter it in the next step</p>
+                <!-- Note about product availability -->
+                <p>Changing the product quantity in your cart may change the availability of the product for delivery or
+                    Click & Collect, including availability in a specific store. Please review your products on the
+                    Checkout
+                    page to avoid disappointment.</p>
+            </section>
 
-        <!-- Order summary aside -->
-        <aside aria-labelledby="order-summary">
-            <h2 id="order-summary">Subtotal:</h2>
-            <p>$211</p>
-            <p>3 items total tax included and shipping calculated at checkout</p>
-            <form>
-                <label for="order-note">Add a note to your order:</label>
-                <textarea id="order-note" name="order-note" rows="4" cols="50"></textarea>
-                <div class="cart-actions">
-                    <button type="button" onclick="location.href='checkout.html'">Check Out</button>
-                    <button type="button" onclick="location.href='../../index.html'">Continue shopping</button>
+            <!-- Order summary aside -->
+
+            <aside aria-labelledby="order-summary">
+                <div class="upper-layer">
+
                 </div>
-            </form>
-            <!-- Payment methods -->
-            <div class="payment-methods">
-                <img src="/assets/images/mastercard.png" alt="MasterCard">
-                <img src="/assets/images/visa.png" alt="Visa">
-                <img src="/assets/images/RuPay.png" alt="RuPay">
-                <a href="#see-all">See all</a>
-            </div>
-        </aside>
+                <div class="lower-layer">
+                    <div class="lower-layer-title">
+                        <h2 id="order-summary">Subtotal:</h2>
+                        <p>$211</p>
+                    </div>
+                    <div class="lower-layer-notice">
+                        <p>3 items total</p>
+                        <span>tax included and shipping calculated at checkout</span>
+                    </div>
+                    <hr>
+                    <form>
+                        <label for="order-note">Add a note to your order:</label>
+                        <textarea id="order-note" name="order-note" rows="4" cols="50"></textarea>
+                        <div class="cart-actions">
+                            <button type="button" onclick="location.href='checkout.html'">Check Out</button>
+                            <button type="button" class="continue-button" onclick="location.href='../../index.html'">Continue shopping</button>
+                        </div>
+                    </form>
+                    <!-- Payment methods -->
+                    <div class="payment-methods">
+                        <img src="/assets/images/mastercard.png" alt="MasterCard">
+                        <img src="/assets/images/visa.png" alt="Visa">
+                        <img src="/assets/images/RuPay.png" alt="RuPay">
+                        <a href="#see-all">See all</a>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
 
         <!-- New release section -->
         <section aria-labelledby="new-release">
@@ -183,10 +213,10 @@
                 <article>
                     <img src="/assets/images/Marvel's spider.png" alt="Marvel's Spider-Man 2">
                     <h4>Marvel's Spider-Man 2</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
+                    <div class="price">
+                        <p>$69.00</p>
+                        <p><strong>8.4</strong>/10</p>
+                    </div>
                     <div class="actions">
                         <button aria-label="Add Marvel's Spider-Man 2 to favorites">
                             <img src="/assets/icons/like.svg" alt="Like button">
@@ -199,10 +229,10 @@
                 <article>
                     <img src="/assets/images/Rise of the ronin.png" alt="Rise of the Ronin">
                     <h4>Rise of the Ronin</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
+                    <div class="price">
+                        <p>$69.00</p>
+                        <p><strong>8.4</strong>/10</p>
+                    </div>
                     <div class="actions">
                         <button aria-label="Add Rise of the Ronin to favorites">
                             <img src="/assets/icons/like.svg" alt="Like button">
@@ -214,8 +244,6 @@
                 </article>
             </div>
         </section>
-        <button>Go Back</button>
-
     </main>
 
     <!-- Footer section -->

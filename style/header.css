@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: var(--font-family);
+    color: var(--color-dark);
 }
 
 /* Header */
@@ -15,9 +15,9 @@ body > header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--color-light);
     padding: 20px 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-medium-gray);
     overflow-x: hidden;
     z-index: 1000;
 }
@@ -40,7 +40,7 @@ header nav ul {
     list-style: none;
     background: var(--primary-color-light);
     height: 50px;
-    border-radius: 50px
+    border-radius: 50px;
 }
 
 header nav ul li {
@@ -49,7 +49,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #5D5D5D;
+    color: var(--color-dark-gray);
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 20px;
@@ -59,13 +59,12 @@ header nav ul li a {
 header nav ul li a:hover,
 header nav ul li a.active {
     background-color: #ffd6dc;
-    color:var(--primary-color);
-
+    color: var(--primary-color);
 }
 
 header nav ul li:first-child a {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--color-light);
 }
 
 /* Search bar */
@@ -88,7 +87,7 @@ header nav ul li:first-child a {
     padding: 10px;
     border-radius: 50px 0 0 50px;
     outline: none;
-    font-size:var(--main-normal-text-size)
+    font-size: var(--main-normal-text-size);
     width: 200px; /* Adjust width as needed */
     background-color: transparent;
 }
@@ -113,7 +112,6 @@ header nav ul li:first-child a {
 .search-button:hover {
     background-color: darken(var(--primary-color), 10%); /* Darken color on hover */
 }
-
 
 /* User profile, favorites, and cart icons */
 header nav div:last-child {
