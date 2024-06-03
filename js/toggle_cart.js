@@ -35,7 +35,7 @@ function toggleCart(button) {
 
     if (cartIcon && cartBadge) {
         if (cartIcon.src.includes('cart.svg')) {
-            cartIcon.src = '/assets/icons/cart-done.svg';
+            cartIcon.src = '/assignment3/assets/icons/cart-done.svg';
             cartCount++;
             cartSubtotal += itemPrice;
 
@@ -49,7 +49,7 @@ function toggleCart(button) {
                                 <span class="item-description">PS5 video game</span>
                             </div>
                             <div class="item-details-right">
-                                <img src="/assets/icons/bin.svg" alt="Delete Icon" class="delete-icon" onclick="removeCartItem(this, ${itemPrice})">
+                                <img src="/assignment3/assets/icons/bin.svg" alt="Delete Icon" class="delete-icon" onclick="removeCartItem(this, ${itemPrice})">
                             </div>
                         </div>
                         <div class="item-details-lower">
@@ -66,7 +66,7 @@ function toggleCart(button) {
 
             cartItemsContainer.insertAdjacentHTML('beforeend', cartItemHTML);
         } else {
-            cartIcon.src = '/assets/icons/cart.svg';
+            cartIcon.src = '/assignment3/assets/icons/cart.svg';
             cartCount--;
             cartSubtotal -= itemPrice;
 
