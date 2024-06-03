@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <!-- Ensures the webpage is responsive and adapts to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/typography.css">
-    <link rel="stylesheet" href="/css/colors.css">
-    <link rel="stylesheet" href="/css/layout_mobile.css">
-    <script src="/js/toggle_cart.js"></script>
-    <script src="/js/search.js"></script>
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/colors.css">
+    <link rel="stylesheet" href="../../css/layout_mobile.css">
+    <script src="../../js/toggle_cart.js"></script>
+    <script src="../../js/search.js"></script>
 </head>
 
 <body>
@@ -20,8 +20,8 @@
     <header>
         <nav>
             <!-- Logo -->
-            <a href="/index.html">
-                <img id="logo" src="/assets/images/logo.png" alt="Games We Played Logo">
+            <a href="../../index.html">
+                <img id="logo" src="../../assets/images/logo.png" alt="Games We Played Logo">
             </a>
             <!-- Navigation links -->
             <ul class="navigation_links">
@@ -33,22 +33,23 @@
             </ul>
             <!-- Search bar -->
             <div class="search-container hide-mobile">
-                <form action="/html/search/search-result-page.html" method="GET">
+                <form action="../../html/search/search-result-page.html" method="GET">
                     <input type="search" name="query" placeholder="Search" class="search-input">
                     <button type="submit" class="search-button">
-                        <img src="/assets/icons/search-svgrepo-com.svg" alt="Search">
+                        <img src="../../assets/icons/search-svgrepo-com.svg" alt="Search">
                     </button>
                 </form>
             </div>
             <!-- User profile, favorites, and cart icons -->
             <div>
-                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;"
+                <a href="#profile"><img src="../../assets/icons/profile.svg" style="width: 35px; height: 40px;"
                         alt="Profile"></a>
-                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;"
+                <a href="#favorites"><img src="../../assets/icons/favorite.svg" style="width: 35px; height: 40px;"
                         alt="Favorites"></a>
                 <a href="javascript:void(0);" onclick="toggleCartVisibility()">
                     <div id="cart-icon-container">
-                        <img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart" id="cart-icon">
+                        <img src="../../assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart"
+                            id="cart-icon">
                         <div id="cart-badge">0</div>
                     </div>
                 </a>
@@ -67,7 +68,7 @@
             <!-- Cart items will be dynamically added here -->
         </div>
         <!-- <div class="cart-item">
-            <img src="/assets/images/call of duty.png" alt="SIFU">
+            <img src="../../assets/images/call of duty.png" alt="SIFU">
             <div class="item-details">
                 <div class="item-details-upper">
                     <div class="item-details-left">
@@ -75,7 +76,7 @@
                         <span class="item-description">PS5 video game</span>
                     </div>
                     <div class="item-details-right">
-                        <img src="/assets/icons/bin.svg" alt="Delete Icon" class="delete-icon">
+                        <img src="../../assets/icons/bin.svg" alt="Delete Icon" class="delete-icon">
                     </div>
                 </div>
                 <div class="item-details-lower">
@@ -108,10 +109,10 @@
         <!-- Search section -->
         <section aria-labelledby="search-section">
             <div class="search-bar">
-                <form action="/html/search/search-result-page.html" method="GET">
+                <form action="../../html/search/search-result-page.html" method="GET">
                     <input type="search" id="search" name="query" placeholder="search...">
                     <button type="submit" class="search-button hide-desktop">
-                        <img src="/assets/icons/search-svgrepo-com.svg" alt="Search">
+                        <img src="../../assets/icons/search-svgrepo-com.svg" alt="Search">
                     </button>
                 </form>
             </div>
@@ -121,11 +122,11 @@
                 <!-- Filter options -->
                 <div class="filter">
                     <button aria-label="Filter results">Filter</button>
-                    <img src="/assets/icons/filter.svg" alt="Filter icon">
+                    <img src="../../assets/icons/filter.svg" alt="Filter icon">
                 </div>
                 <div class="relevancy">
                     <button aria-label="Sort by relevancy">Relevancy</button>
-                    <img src="/assets/icons/relevancy.svg" alt="Relevancy icon">
+                    <img src="../../assets/icons/relevancy.svg" alt="Relevancy icon">
                 </div>
             </div>
         </section>
@@ -134,7 +135,7 @@
         <section aria-labelledby="new-release">
             <header>
                 <h2 id="new-release">NEW RELEASE</h2>
-                <img src="/assets/icons/right-icon-white.svg" class="svg-color" alt="">
+                <img src="../../assets/icons/right-icon-white.svg" class="svg-color" alt="">
             </header>
             <div class="grid-header" id="search-result-page-grid-header">
                 <h3>What's hot!</h3>
@@ -144,7 +145,7 @@
             <div class="game-grid">
                 <!-- Game card example with image, title, price, rating, and actions -->
                 <article>
-                    <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI"
+                    <img src="../../assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI"
                         onclick="window.location.href='/html/product/product-page-second.html'">
                     <h4>Final Fantasy XVI</h4>
                     <div class="price">
@@ -153,16 +154,16 @@
                     </div>
                     <div class="actions">
                         <button aria-label="Add Final Fantasy XVI to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="../../assets/icons/like.svg" alt="like-button">
                         </button>
                         <button aria-label="Add Final Fantasy XVI to cart" onclick="toggleCart(this)">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="../../assets/icons/cart.svg" alt="cart-icon">
                         </button>
                     </div>
                 </article>
                 <!-- Additional new release games follow the same structure -->
                 <article>
-                    <img src="/assets/images/Call of duty.png" alt="Call of Duty: Modern Warfare III"
+                    <img src="../../assets/images/Call of duty.png" alt="Call of Duty: Modern Warfare III"
                         onclick="window.location.href='/html/product/product-page-second.html'">
                     <h4>Call of Duty: Modern Warfare III</h4>
                     <div class="price">
@@ -171,15 +172,15 @@
                     </div>
                     <div class="actions">
                         <button aria-label="Add Call of Duty: Modern Warfare III to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="../../assets/icons/like.svg" alt="like-button">
                         </button>
                         <button aria-label="Add Call of Duty: Modern Warfare III to cart" onclick="toggleCart(this)">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="../../assets/icons/cart.svg" alt="cart-icon">
                         </button>
                     </div>
                 </article>
                 <article>
-                    <img src="/assets/images/Marvel's spider.png" alt="Marvel's Spider-Man 2"
+                    <img src="../../assets/images/Marvel's spider.png" alt="Marvel's Spider-Man 2"
                         onclick="window.location.href='/html/product/product-page-second.html'">
                     <h4>Marvel's Spider-Man 2</h4>
                     <div class="price">
@@ -188,15 +189,15 @@
                     </div>
                     <div class="actions">
                         <button aria-label="Add Marvel's Spider-Man 2 to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="../../assets/icons/like.svg" alt="like-button">
                         </button>
                         <button aria-label="Add Marvel's Spider-Man 2 to cart" onclick="toggleCart(this)">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="../../assets/icons/cart.svg" alt="cart-icon">
                         </button>
                     </div>
                 </article>
                 <article>
-                    <img src="/assets/images/Rise of the ronin.png" alt="Rise of the Ronin"
+                    <img src="../../assets/images/Rise of the ronin.png" alt="Rise of the Ronin"
                         onclick="window.location.href='/html/product/product-page-second.html'">
                     <h4>Rise of the Ronin</h4>
                     <div class="price">
@@ -205,10 +206,10 @@
                     </div>
                     <div class="actions">
                         <button aria-label="Add Rise of the Ronin to favorites">
-                            <img src="/assets/icons/like.svg" alt="like-button">
+                            <img src="../../assets/icons/like.svg" alt="like-button">
                         </button>
                         <button aria-label="Add Rise of the Ronin to cart" onclick="toggleCart(this)">
-                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                            <img src="../../assets/icons/cart.svg" alt="cart-icon">
                         </button>
                     </div>
                 </article>
@@ -232,23 +233,23 @@
                 <section aria-labelledby="features">
                     <div class="features-grid">
                         <article>
-                            <img src="/assets/icons/top-notch support.svg" alt="Top-notch support">
+                            <img src="../../assets/icons/top-notch support.svg" alt="Top-notch support">
                             <h3>Top-notch support</h3>
                             <span>Years of experience in customer service.</span>
                         </article>
                         <article>
-                            <img src="/assets/icons/shipping internationally.svg" alt="Shipping Internationally">
+                            <img src="../../assets/icons/shipping internationally.svg" alt="Shipping Internationally">
                             <h3>Shipping Internationally</h3>
                             <span>International orders processed weekly.</span>
 
                         </article>
                         <article>
-                            <img src="/assets/icons/satisfied or refunded.svg" alt="Satisfied or refunded">
+                            <img src="../../assets/icons/satisfied or refunded.svg" alt="Satisfied or refunded">
                             <h3>Satisfied or refunded</h3>
                             <span>60 days warranty.</span>
                         </article>
                         <article>
-                            <img src="/assets/icons/secure payments.svg" alt="Secure payments">
+                            <img src="../../assets/icons/secure payments.svg" alt="Secure payments">
                             <h3>Secure payments</h3>
                             <span>Payment options to suit everyone.</span>
                         </article>
@@ -268,15 +269,15 @@
                         <div class="social-media">
                             <p>Follow Us</p>
                             <a href="#">
-                                <img src="/assets/icons/facebook.svg" alt="Facebook">
-                                <img src="/assets/icons/instagram.svg" alt="Instagram">
+                                <img src="../../assets/icons/facebook.svg" alt="Facebook">
+                                <img src="../../assets/icons/instagram.svg" alt="Instagram">
                             </a>
                         </div>
                         <div class="we-accept-img">
                             <p>We Accept</p>
                             <a href="#">
-                                <img src="/assets/icons/s-payment.svg" alt="Payment Options">
-                                <img src="/assets/icons/paypal.svg" alt="PayPal Icon">
+                                <img src="../../assets/icons/s-payment.svg" alt="Payment Options">
+                                <img src="../../assets/icons/paypal.svg" alt="PayPal Icon">
                             </a>
                         </div>
                     </div>

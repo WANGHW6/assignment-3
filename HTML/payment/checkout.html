@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <!-- Ensures the webpage is responsive and adapts to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/typography.css">
-    <link rel="stylesheet" href="/css/colors.css">
-    <link rel="stylesheet" href="/css/layout_checkout.css">
-    <link rel="stylesheet" href="/css/colors_checkout.css">
-    <link rel="stylesheet" href="/css/typography_checkout.css">
-    <link rel="stylesheet" href="/css/layout_mobile.css">
-    <link rel="stylesheet" href="/css/layout_mobile.css">
-    <script src="/js/checkout.js"></script>
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/colors.css">
+    <link rel="stylesheet" href="../../css/layout_checkout.css">
+    <link rel="stylesheet" href="../../css/colors_checkout.css">
+    <link rel="stylesheet" href="../../css/typography_checkout.css">
+    <link rel="stylesheet" href="../../css/layout_mobile.css">
+    <link rel="stylesheet" href="../../css/layout_mobile.css">
+    <script src="../../js/checkout.js"></script>
 </head>
 
 <body>
@@ -22,8 +22,8 @@
     <header>
         <nav>
             <!-- Logo -->
-            <a href="/index.html">
-                <img id="logo" src="/assets/images/logo.png" alt="Games We Played Logo">
+            <a href="../../index.html">
+                <img id="logo" src="../../assets/images/logo.png" alt="Games We Played Logo">
             </a>
             <!-- Navigation links -->
             <ul class="navigation_links">
@@ -35,22 +35,23 @@
             </ul>
             <!-- Search bar -->
             <div class="search-container hide-mobile">
-                <form action="/html/search/search-result-page.html" method="GET">
+                <form action="../../html/search/search-result-page.html" method="GET">
                     <input type="search" name="query" placeholder="Search" class="search-input">
                     <button type="submit" class="search-button">
-                        <img src="/assets/icons/search-svgrepo-com.svg" alt="Search">
+                        <img src="../../assets/icons/search-svgrepo-com.svg" alt="Search">
                     </button>
                 </form>
             </div>
             <!-- User profile, favorites, and cart icons -->
             <div>
-                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;"
+                <a href="#profile"><img src="../../assets/icons/profile.svg" style="width: 35px; height: 40px;"
                         alt="Profile"></a>
-                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;"
+                <a href="#favorites"><img src="../../assets/icons/favorite.svg" style="width: 35px; height: 40px;"
                         alt="Favorites"></a>
                 <a href="javascript:void(0);" onclick="toggleCartVisibility()">
                     <div id="cart-icon-container">
-                        <img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart" id="cart-icon">
+                        <img src="../../assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart"
+                            id="cart-icon">
                         <div id="cart-badge">0</div>
                     </div>
                 </a>
@@ -69,7 +70,7 @@
             <!-- Cart items will be dynamically added here -->
         </div>
         <!-- <div class="cart-item">
-            <img src="/assets/images/call of duty.png" alt="SIFU">
+            <img src="../../assets/images/call of duty.png" alt="SIFU">
             <div class="item-details">
                 <div class="item-details-upper">
                     <div class="item-details-left">
@@ -77,7 +78,7 @@
                         <span class="item-description">PS5 video game</span>
                     </div>
                     <div class="item-details-right">
-                        <img src="/assets/icons/bin.svg" alt="Delete Icon" class="delete-icon">
+                        <img src="../../assets/icons/bin.svg" alt="Delete Icon" class="delete-icon">
                     </div>
                 </div>
                 <div class="item-details-lower">
@@ -191,9 +192,9 @@
                         <div class="card-logos">
                             <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
                             <label for="credit-card">Credit card</label>
-                            <img src="/assets/images/mastercard.png" alt="MasterCard">
-                            <img src="/assets/images/visa.png" alt="Visa">
-                            <img src="/assets/images/rupay.png" alt="RuPay">
+                            <img src="../../assets/images/mastercard.png" alt="MasterCard">
+                            <img src="../../assets/images/visa.png" alt="Visa">
+                            <img src="../../assets/images/rupay.png" alt="RuPay">
                             <a href="#see-all">See all</a>
                         </div>
                     </div>
@@ -218,7 +219,7 @@
                 <ul>
                     <!-- Cart items here -->
                     <li>
-                        <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                        <img src="../../assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                         <div>
                             <div class="cart-name">
                                 <span>Final Fantasy XVI</span>
@@ -231,13 +232,13 @@
                             </div>
                             <p>$69</p>
                             <button aria-label="Remove item">
-                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                                <img src="../../assets/icons/bin.svg" alt="Remove item icon">
                             </button>
                         </div>
                     </li>
                     <!-- Additional cart items follow the same structure -->
                     <li>
-                        <img src="/assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
+                        <img src="../../assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
                         <div>
                             <div class="cart-name">
                                 <span>Rise of the Ronin</span>
@@ -250,12 +251,12 @@
                             </div>
                             <p>$69</p>
                             <button aria-label="Remove item">
-                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                                <img src="../../assets/icons/bin.svg" alt="Remove item icon">
                             </button>
                         </div>
                     </li>
                     <li>
-                        <img src="/assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
+                        <img src="../../assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
                         <div>
                             <div class="cart-name">
                                 <span>Call of Duty: Modern Warfare III</span>
@@ -268,7 +269,7 @@
                             </div>
                             <p>$169</p>
                             <button aria-label="Remove item" type="">
-                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                                <img src="../../assets/icons/bin.svg" alt="Remove item icon">
                             </button>
                         </div>
                     </li>
@@ -330,7 +331,7 @@
                     </div>
                 </div>
                 <div class="back-button">
-                    <img src="/assets/icons/back-btn-icon.svg" alt="back button icon">
+                    <img src="../../assets/icons/back-btn-icon.svg" alt="back button icon">
                     <span>Return to information</span>
                 </div>
                 <div class="shipping-button-container hide-desktop">
@@ -345,7 +346,7 @@
                 <ul>
                     <!-- Cart item -->
                     <li>
-                        <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                        <img src="../../assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                         <div>
                             <div class="cart-name">
                                 <span>Final Fantasy XVI</span>
@@ -358,13 +359,13 @@
                             </div>
                             <p>$69</p>
                             <button aria-label="Remove item">
-                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                                <img src="../../assets/icons/bin.svg" alt="Remove item icon">
                             </button>
                         </div>
                     </li>
                     <!-- Additional cart items follow the same structure -->
                     <li>
-                        <img src="/assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
+                        <img src="../../assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
                         <div>
                             <div class="cart-name">
                                 <span>Rise of the Ronin</span>
@@ -377,12 +378,12 @@
                             </div>
                             <p>$69</p>
                             <button aria-label="Remove item">
-                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                                <img src="../../assets/icons/bin.svg" alt="Remove item icon">
                             </button>
                         </div>
                     </li>
                     <li>
-                        <img src="/assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
+                        <img src="../../assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
                         <div>
                             <div class="cart-name">
                                 <span>Call of Duty: Modern Warfare III</span>
@@ -395,7 +396,7 @@
                             </div>
                             <p>$169</p>
                             <button aria-label="Remove item" type="">
-                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                                <img src="../../assets/icons/bin.svg" alt="Remove item icon">
                             </button>
                         </div>
                     </li>
@@ -466,9 +467,9 @@
                         <div class="card-logos">
                             <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
                             <label for="credit-card">Credit card</label>
-                            <img src="/assets/images/mastercard.png" alt="MasterCard">
-                            <img src="/assets/images/visa.png" alt="Visa">
-                            <img src="/assets/images/rupay.png" alt="RuPay">
+                            <img src="../../assets/images/mastercard.png" alt="MasterCard">
+                            <img src="../../assets/images/visa.png" alt="Visa">
+                            <img src="../../assets/images/rupay.png" alt="RuPay">
                             <a href="#see-all">See all</a>
                         </div>
                         <div class="credit-card-details">
@@ -507,7 +508,7 @@
                 </div>
 
                 <div class="back-button">
-                    <img src="/assets/icons/back-btn-icon.svg" alt="back button icon">
+                    <img src="../../assets/icons/back-btn-icon.svg" alt="back button icon">
                     <span>Return to information</span>
                 </div>
                 <div class="shipping-button-container hide-desktop">
@@ -520,7 +521,7 @@
                 </header>
                 <ul>
                     <li>
-                        <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                        <img src="../../assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                         <div>
                             <div class="cart-name">
                                 <span>Final Fantasy XVI</span>
@@ -533,12 +534,12 @@
                             </div>
                             <p>$69</p>
                             <button aria-label="Remove item">
-                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                                <img src="../../assets/icons/bin.svg" alt="Remove item icon">
                             </button>
                         </div>
                     </li>
                     <li>
-                        <img src="/assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
+                        <img src="../../assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
                         <div>
                             <div class="cart-name">
                                 <span>Rise of the Ronin</span>
@@ -551,12 +552,12 @@
                             </div>
                             <p>$69</p>
                             <button aria-label="Remove item">
-                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                                <img src="../../assets/icons/bin.svg" alt="Remove item icon">
                             </button>
                         </div>
                     </li>
                     <li>
-                        <img src="/assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
+                        <img src="../../assets/images/call of duty.png" alt="Call of Duty: Modern Warfare III">
                         <div>
                             <div class="cart-name">
                                 <span>Call of Duty: Modern Warfare III</span>
@@ -569,7 +570,7 @@
                             </div>
                             <p>$169</p>
                             <button aria-label="Remove item">
-                                <img src="/assets/icons/bin.svg" alt="Remove item icon">
+                                <img src="../../assets/icons/bin.svg" alt="Remove item icon">
                             </button>
                         </div>
                     </li>
@@ -605,27 +606,27 @@
         <section class="overlay" style="display: none;">
             <div class="overlay-content">
                 <div class="top-section">
-                    <img src="/assets/icons/payment-success-icon.svg" alt="Success Icon">
+                    <img src="../../assets/icons/payment-success-icon.svg" alt="Success Icon">
                     <h2>Payment successful, thank you for shopping!</h2>
                 </div>
                 <div class="order-summary">
                     <div class="left-summary">
                         <div class="item-card">
-                            <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                            <img src="../../assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                             <div class="item-description">
                                 <p class="item-name">Final Fantasy XVI</p>
                                 <p class="item-type">PS5 video game</p>
                             </div>
                         </div>
                         <div class="item-card">
-                            <img src="/assets/images/call of duty.png" alt="SIFU">
+                            <img src="../../assets/images/call of duty.png" alt="SIFU">
                             <div class="item-description">
                                 <p class="item-name">SIFU</p>
                                 <p class="item-type">PS5 video game</p>
                             </div>
                         </div>
                         <div class="item-card">
-                            <img src="/assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
+                            <img src="../../assets/images/rise-of-the ronin.png" alt="Rise of the Ronin">
                             <div class="item-description">
                                 <p class="item-name">Rise of the Ronin</p>
                                 <p class="item-type">PS5 video game</p>
@@ -679,23 +680,23 @@
             <section aria-labelledby="features">
                 <div class="features-grid">
                     <article>
-                        <img src="/assets/icons/top-notch support.svg" alt="Top-notch support">
+                        <img src="../../assets/icons/top-notch support.svg" alt="Top-notch support">
                         <h3>Top-notch support</h3>
                         <span>Years of experience in customer service.</span>
                     </article>
                     <article>
-                        <img src="/assets/icons/shipping internationally.svg" alt="Shipping Internationally">
+                        <img src="../../assets/icons/shipping internationally.svg" alt="Shipping Internationally">
                         <h3>Shipping Internationally</h3>
                         <span>International orders processed weekly.</span>
 
                     </article>
                     <article>
-                        <img src="/assets/icons/satisfied or refunded.svg" alt="Satisfied or refunded">
+                        <img src="../../assets/icons/satisfied or refunded.svg" alt="Satisfied or refunded">
                         <h3>Satisfied or refunded</h3>
                         <span>60 days warranty.</span>
                     </article>
                     <article>
-                        <img src="/assets/icons/secure payments.svg" alt="Secure payments">
+                        <img src="../../assets/icons/secure payments.svg" alt="Secure payments">
                         <h3>Secure payments</h3>
                         <span>Payment options to suit everyone.</span>
                     </article>
@@ -715,15 +716,15 @@
                     <div class="social-media">
                         <p>Follow Us</p>
                         <a href="#">
-                            <img src="/assets/icons/facebook.svg" alt="Facebook">
-                            <img src="/assets/icons/instagram.svg" alt="Instagram">
+                            <img src="../../assets/icons/facebook.svg" alt="Facebook">
+                            <img src="../../assets/icons/instagram.svg" alt="Instagram">
                         </a>
                     </div>
                     <div class="we-accept-img">
                         <p>We Accept</p>
                         <a href="#">
-                            <img src="/assets/icons/s-payment.svg" alt="Payment Options">
-                            <img src="/assets/icons/paypal.svg" alt="PayPal Icon">
+                            <img src="../../assets/icons/s-payment.svg" alt="Payment Options">
+                            <img src="../../assets/icons/paypal.svg" alt="PayPal Icon">
                         </a>
                     </div>
                 </div>
