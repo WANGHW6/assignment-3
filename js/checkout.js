@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const shippingMethodInput = document.querySelector('main section:nth-of-type(2) input[name="shipping"]:checked');
         if (shippingMethodInput) {
             const shippingMethod = shippingMethodInput.value;
-            document.querySelector(`main section:nth-of-type(3) input[name="shipping"][value="${shippingMethod}"]`).checked = true;
+            document.querySelector(`main section:nth-of-type(3) input[name="_shipping"][value="${shippingMethod}"]`).checked = true;
         }
     }
 

@@ -138,12 +138,22 @@ main>button {
     cursor: pointer;
 }
 
-.showcase .content>.first-content .add-to-cart {
-    background: var(--secondary-color);
+.showcase .content .first-content .add-to-cart button {
+    color: white;
+    background-color: var(--secondary-color);
 }
 
 .showcase .content .first-content .add-to-cart button>a {
     color: var(--color-light);
+}
+
+.showcase .content .first-content .add-to-cart button.added {
+    background-color: #D3D3D3;
+    border-color: #8B0000;
+}
+
+.showcase .content .first-content .add-to-cart button.added>a {
+    color: #8B0000;
 }
 
 /* Color Styles */

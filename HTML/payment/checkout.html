@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/layout_checkout.css">
     <link rel="stylesheet" href="/css/colors_checkout.css">
     <link rel="stylesheet" href="/css/typography_checkout.css">
+    <link rel="stylesheet" href="/css/layout_mobile.css">
     <script src="/js/checkout.js"></script>
 </head>
 
@@ -160,6 +161,9 @@
                         <label for="purchase-order">Purchase order</label>
                     </div>
                 </form>
+                <div class="shipping-button-container hide-desktop">
+                    <button class="continue-button">Proceed payment</button>
+                </div>
             </div>
 
             <div class="right-side">
@@ -244,7 +248,7 @@
                     </div>
                     <p>Including $4 in taxes</p>
                 </div>
-                <div class="shipping-button-container">
+                <div class="shipping-button-container hide-mobile">
                     <button class="continue-button">Continue to shipping</button>
                 </div>
             </div>
@@ -283,6 +287,9 @@
                 <div class="back-button">
                     <img src="/assets/icons/back-btn-icon.svg" alt="back button icon">
                     <span>Return to information</span>
+                </div>
+                <div class="shipping-button-container hide-desktop">
+                    <button class="continue-button">Proceed payment</button>
                 </div>
             </div>
             <div class="right-side">
@@ -369,7 +376,7 @@
                     </div>
                     <p>Including $4 in taxes</p>
                 </div>
-                <div class="shipping-button-container">
+                <div class="shipping-button-container hide-mobile">
                     <button class="continue-button">Continue to payment</button>
                 </div>
             </div>
@@ -395,12 +402,12 @@
                 <div class="shipping-method">
                     <label for="shipping-method">Shipping</label>
                     <div class="standard">
-                        <input type="radio" id="standard" name="shipping" checked="checked" value="standard">
+                        <input type="radio" id="standard" name="_shipping" checked value="standard">
                         <label for="standard">Standard</label>
                         <span>Free</span>
                     </div>
                     <div class="express">
-                        <input type="radio" id="express" name="shipping" value="express">
+                        <input type="radio" id="express" name="_shipping" value="express">
                         <label for="express">Express</label>
                         <span>$4</span>
                     </div>
@@ -457,6 +464,9 @@
                 <div class="back-button">
                     <img src="/assets/icons/back-btn-icon.svg" alt="back button icon">
                     <span>Return to information</span>
+                </div>
+                <div class="shipping-button-container hide-desktop">
+                    <button class="continue-button">Proceed payment</button>
                 </div>
             </div>
             <div class="right-side">
@@ -540,7 +550,7 @@
                     </div>
                     <p>Including $4 in taxes</p>
                 </div>
-                <div class="shipping-button-container">
+                <div class="shipping-button-container hide-mobile">
                     <button class="continue-button">Proceed payment</button>
                 </div>
             </div>
@@ -551,7 +561,7 @@
             <div class="overlay-content">
                 <div class="top-section">
                     <img src="/assets/icons/payment-success-icon.svg" alt="Success Icon">
-                    <h2>Payment success, thank you for shopping!</h2>
+                    <h2>Payment successful, thank you for shopping!</h2>
                 </div>
                 <div class="order-summary">
                     <div class="left-summary">
@@ -592,8 +602,10 @@
                         <p>Final Fantasy XVI - Price: $69</p>
                         <p>SIFU - Price: $69</p>
                         <p>Call of Duty: Modern Warfare III - Price: $69</p>
-                        <p><strong>Shipping:</strong> FREE</p>
-                        <p><strong>Total:</strong> $211</p>
+                        <p><strong>Shipping:</strong></p>
+                        <p class="price">FREE</p>
+                        <p><strong>Total:</strong></p>
+                        <p class="price"> $211</p>
                     </div>
                 </div>
                 <div class="button-container">
@@ -644,22 +656,6 @@
                     </article>
                 </div>
             </section>
-            <section aria-labelledby="disclaimer">
-                <header>
-                    <p id="disclaimer">DISCLAIMER</p>
-                    <button>
-                        <img src="/assets/icons/plus-icon.svg" alt="Expand">
-                    </button>
-                </header>
-                <p>
-                    Please note that games and genuine products are all preowned and have previously been used unless
-                    otherwise stated. Some scuffs and scratches from use are likely.
-                    Images in product description is a general indication and not necessarily an exact image. Brand New
-                    and/or sealed items will not be tested.
-                    Please refer to our refunds policy.
-                </p>
-            </section>
-            <button><img src="/assets/icons/plus-icon.svg" alt="Expand"></button>
             <section aria-labelledby="footer-bottom-option">
                 <ul>
                     <li><a href="#about-us">ABOUT US</a></li>

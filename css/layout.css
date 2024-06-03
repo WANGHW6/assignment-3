@@ -384,9 +384,8 @@ main {
 
 main .showcase .content {
     width: 98%;
-    height: 200px;
     position: absolute;
-    bottom: 150px;
+    bottom: 0px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -402,7 +401,7 @@ main>button {
 
 .showcase .content>.first-content {
     width: 100%;
-    height: 220px;
+    /* height: 220px; */
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -457,29 +456,34 @@ main>button {
     border-radius: 20px;
 }
 
-.showcase .content .first-content .add-to-cart>button {
-    all: initial;
+.showcase .content .first-content .add-to-cart button {
     margin: 10px;
     padding: 2px;
-    height: 80%;
+    height: 52.5px;
     width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid transparent;
+    border-radius: 20px;
 }
 
 .showcase .content .first-content .add-to-cart button>a {
     height: 70%;
     width: 150px;
     border: none;
-    margin: 0 10px 0 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .showcase .content .first-content .add-to-cart>button img {
     width: 25px;
     height: 25px;
+    margin: 0 0 0 10px;
 }
 
 .showcase .content .second-content {
@@ -492,7 +496,7 @@ main>button {
 .showcase .content .second-content .second-content-header {
     margin: 0;
     padding: 10px;
-    width: 30%;
+    /* width: 30%; */
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -556,12 +560,8 @@ main>button {
 }
 
 .showcase .content .scenes .all-figures figure>img {
-    width: 224px;
+    width: auto;
     height: 150px;
-    border-radius: 30px 0 0 30px;
-}
-
-.showcase .content .scenes .all-figures figure>.rounded {
     border-radius: 30px;
 }
 
@@ -586,6 +586,7 @@ section[aria-labelledby="featured-games"] .horizontal-slider article {
 section[aria-labelledby="featured-games"] .horizontal-slider article>img {
     width: 400px;
     height: 300px;
+    border-radius: 30px;
 }
 
 section[aria-labelledby="featured-games"] .horizontal-slider .description {
@@ -686,7 +687,7 @@ section[aria-labelledby="new-release"] .grid-header a {
 .game-grid article img {
     width: 100%;
     height: 60%;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-bottom: 10px;
 }
 
@@ -1158,4 +1159,8 @@ aside[aria-labelledby="order-summary"] .lower-layer .payment-methods img {
     background: none;
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
+}
+
+.hide-desktop {
+    display: none;
 }
