@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/typography.css">
     <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="/css/layout_mobile.css">
 </head>
 
 <body>
@@ -16,23 +17,19 @@
     <header>
         <nav>
             <!-- Logo -->
-            <div>
-                <!-- Logo container -->
-                <a href="/index.html">
-                    <img src="/assets/images/logo.png" alt="Games We Played Logo">
-                </a>
-                <!-- The website's logo -->
-            </div>
+            <a href="/index.html">
+                <img id="logo" src="/assets/images/logo.png" alt="Games We Played Logo">
+            </a>
             <!-- Navigation links -->
-            <ul>
-                <li><a href="/index.html">PlayStation</a></li>
+            <ul class="navigation_links">
+                <li><a href="#playstation">PlayStation</a></li>
                 <li><a href="#xbox">Xbox</a></li>
                 <li><a href="#switch">Switch</a></li>
                 <li><a href="#controllers">Controllers</a></li>
                 <li><a href="#storage">Storage</a></li>
             </ul>
             <!-- Search bar -->
-            <div class="search-container">
+            <div class="search-container hide-mobile">
                 <form action="/html/search/search-result-page.html" method="GET">
                     <input type="search" name="query" placeholder="Search" class="search-input">
                     <button type="submit" class="search-button">
@@ -46,15 +43,63 @@
                         alt="Profile"></a>
                 <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;"
                         alt="Favorites"></a>
-                <a href="javascript:void(0);" onclick="">
+                <a href="javascript:void(0);" onclick="toggleCartVisibility()">
                     <div id="cart-icon-container">
                         <img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart" id="cart-icon">
-                        <div id="cart-badge" style="display: block;">3</div>
+                        <div id="cart-badge">0</div>
                     </div>
                 </a>
             </div>
         </nav>
     </header>
+
+    <!-- Cart Preview-->
+    <div class="cart-container" style="display: none;">
+        <div class="cart-header">
+            <span>YOUR CART – <span id="cart-count">0</span> items total</span>
+            <button class="close-button" onclick="toggleCartVisibility()">&times;</button>
+        </div>
+        <hr>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <!-- <div class="cart-item">
+        <img src="/assets/images/call of duty.png" alt="SIFU">
+        <div class="item-details">
+            <div class="item-details-upper">
+                <div class="item-details-left">
+                    <span class="item-name">SIFU</span>
+                    <span class="item-description">PS5 video game</span>
+                </div>
+                <div class="item-details-right">
+                    <img src="/assets/icons/bin.svg" alt="Delete Icon" class="delete-icon">
+                </div>
+            </div>
+            <div class="item-details-lower">
+                <span class="item-price">$69</span>
+                <div class="item-quantity">
+                    <button class="quantity-button">-</button>
+                    <span class="quantity-value">1</span>
+                    <button class="quantity-button">+</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+        <div class="cart-summary">
+            <div class="summary-details">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="summary-notation">
+                tax and shipping calculated at checkout.
+            </p>
+        </div>
+        <div class="cart-actions">
+            <button class="view-cart-button" onclick="location.href='/html/payment/view-cart.html'">view cart</button>
+            <button class="checkout-button" onclick="location.href='/html/payment/checkout.html'">Check Out</button>
+        </div>
+    </div>
+
 
     <!-- Main content area -->
     <main>
@@ -179,24 +224,22 @@
             </div>
             <div class="game-grid">
                 <!-- New release game -->
-                <a href="/html/product/product-page-second.html">
-                    <article>
-                        <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
-                        <h4>Final Fantasy XVI</h4>
-                        <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                        <div class="actions">
-                            <button aria-label="Add Final Fantasy XVI to favorites">
-                                <img src="/assets/icons/like.svg" alt="Like button">
-                            </button>
-                            <button aria-label="Add Final Fantasy XVI to cart">
-                                <img src="/assets/icons/cart.svg" alt="Cart icon">
-                            </button>
-                        </div>
-                    </article>
-                </a>
+                <article>
+                    <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
+                    <h4>Final Fantasy XVI</h4>
+                    <div class="price">
+                        <p>$69.00</p>
+                        <p><strong>8.4</strong>/10</p>
+                    </div>
+                    <div class="actions">
+                        <button aria-label="Add Final Fantasy XVI to favorites">
+                            <img src="/assets/icons/like.svg" alt="Like button">
+                        </button>
+                        <button aria-label="Add Final Fantasy XVI to cart">
+                            <img src="/assets/icons/cart.svg" alt="Cart icon">
+                        </button>
+                    </div>
+                </article>
                 <!-- Additional new release games follow the same structure -->
                 <article>
                     <img src="/assets/images/Call of duty.png" alt="Call of Duty: Modern Warfare III">
@@ -254,7 +297,7 @@
     <footer>
         <section aria-labelledby="join-us">
             <h2 id="join-us">JOIN US!</h2>
-            <p>Subscribe now and be the first to know about <strong style="color: #F50808;">Exclusive Offers - Deals -
+            <p>Subscribe now and be the first to know about <strong>Exclusive Offers - Deals -
                     Sales - New Releases and
                     MORE!</strong></p>
             <form action="#" method="post">
@@ -279,7 +322,7 @@
                     <article>
                         <img src="/assets/icons/satisfied or refunded.svg" alt="Satisfied or refunded">
                         <h3>Satisfied or refunded</h3>
-                        <span>60 days warranty storewide.</span>
+                        <span>60 days warranty.</span>
                     </article>
                     <article>
                         <img src="/assets/icons/secure payments.svg" alt="Secure payments">
@@ -306,10 +349,12 @@
                             <img src="/assets/icons/instagram.svg" alt="Instagram">
                         </a>
                     </div>
-                    <div class="we-accept">
+                    <div class="we-accept-img">
                         <p>We Accept</p>
-                        <img src="/assets/icons/s-payment.svg" alt="Payment Options">
-                        <img src="/assets/icons/paypal.svg" alt="PayPal Icon">
+                        <a href="#">
+                            <img src="/assets/icons/s-payment.svg" alt="Payment Options">
+                            <img src="/assets/icons/paypal.svg" alt="PayPal Icon">
+                        </a>
                     </div>
                 </div>
             </section>

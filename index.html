@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/typography.css">
     <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="/css/layout_mobile.css">
     <script src="/js/toggle_cart.js"></script>
 </head>
 
@@ -17,12 +18,11 @@
     <header>
         <nav>
             <!-- Logo -->
-            <div>
-                <link rel="stylesheet" href="/index.html">
-                <img src="/assets/images/logo.png" alt="Games We Played Logo">
-            </div>
+            <a href="/index.html">
+                <img id="logo" src="/assets/images/logo.png" alt="Games We Played Logo">
+            </a>
             <!-- Navigation links -->
-            <ul>
+            <ul class="navigation_links">
                 <li><a href="#playstation">PlayStation</a></li>
                 <li><a href="#xbox">Xbox</a></li>
                 <li><a href="#switch">Switch</a></li>
@@ -30,7 +30,7 @@
                 <li><a href="#storage">Storage</a></li>
             </ul>
             <!-- Search bar -->
-            <div class="search-container">
+            <div class="search-container hide-mobile">
                 <form action="/html/search/search-result-page.html" method="GET">
                     <input type="search" name="query" placeholder="Search" class="search-input">
                     <button type="submit" class="search-button">
@@ -103,6 +103,15 @@
 
     <!-- Main content area -->
     <main>
+        <!-- search-bar for mobile version -->
+        <div class="search-container hide-desktop">
+            <form action="/html/search/search-result-page.html" method="GET">
+                <button type="submit" class="search-button">
+                    <img src="/assets/icons/search-svgrepo-com.svg" alt="Search">
+                </button>
+                <input type="search" name="query" placeholder="Search your games here..." class="search-input">
+            </form>
+        </div>
         <!-- Showcase section with featured product -->
         <section class="showcase">
             <a href="html/product/product-page.html">
@@ -410,7 +419,7 @@
     <footer>
         <section aria-labelledby="join-us">
             <h2 id="join-us">JOIN US!</h2>
-            <p>Subscribe now and be the first to know about <strong style="color: #F50808;">Exclusive Offers - Deals -
+            <p>Subscribe now and be the first to know about <strong>Exclusive Offers - Deals -
                     Sales - New Releases and
                     MORE!</strong></p>
             <form action="#" method="post">
@@ -435,7 +444,7 @@
                     <article>
                         <img src="/assets/icons/satisfied or refunded.svg" alt="Satisfied or refunded">
                         <h3>Satisfied or refunded</h3>
-                        <span>60 days warranty storewide.</span>
+                        <span>60 days warranty.</span>
                     </article>
                     <article>
                         <img src="/assets/icons/secure payments.svg" alt="Secure payments">
@@ -462,10 +471,12 @@
                             <img src="/assets/icons/instagram.svg" alt="Instagram">
                         </a>
                     </div>
-                    <div class="we-accept">
+                    <div class="we-accept-img">
                         <p>We Accept</p>
-                        <img src="/assets/icons/s-payment.svg" alt="Payment Options">
-                        <img src="/assets/icons/paypal.svg" alt="PayPal Icon">
+                        <a href="#">
+                            <img src="/assets/icons/s-payment.svg" alt="Payment Options">
+                            <img src="/assets/icons/paypal.svg" alt="PayPal Icon">
+                        </a>
                     </div>
                 </div>
             </section>
