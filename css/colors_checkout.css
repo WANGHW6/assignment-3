@@ -1,0 +1,218 @@
+/* Color Styles */
+
+nav[aria-label="breadcrumb"] ul li a {
+  color: #000;
+}
+
+nav[aria-label="breadcrumb"] ul li a:hover {
+  text-decoration: underline;
+}
+
+nav[aria-label="breadcrumb"] ul li a:visited {
+  color: #000;
+}
+
+nav[aria-label="breadcrumb"] ul li:first-child a {
+  color: #a52a2a;
+}
+
+nav[aria-label="breadcrumb"] ul li:not(:last-child)::after {
+  color: #ccc;
+}
+
+.checkout {
+  background: var(--primary-color-light);
+}
+
+.checkout .left-side {
+  background: #f4f5f7;
+}
+
+.checkout .left-side .contact-title .contact-login-title a {
+  color: #fd803e;
+}
+
+.checkout .left-side .card-type a {
+  background: #fff;
+}
+
+/* Color Styles */
+
+.right-side form {
+  background-color: white;
+}
+
+fieldset [type="email"],
+input[type="text"],
+input[type="password"],
+select {
+  border: 1px solid #000;
+  background-color: white;
+  color: #333;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+  background-repeat: no-repeat;
+}
+
+select option:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+header h2 {
+  color: #333;
+}
+
+.item {
+  background-color: #FDFDFD;
+}
+
+.item-details p:last-child {
+  color: #777;
+}
+
+.item-quantity>button {
+  background-color: #EEE;
+}
+
+/* Color Styles */
+
+.gift-card>input {
+  border: 1px solid #DDD;
+  border-radius: 5px;
+}
+
+.gift-card>button {
+  background-color: #8B0000;
+  border: none;
+  border-radius: 7px;
+}
+
+.gift-card>hr {
+  background: #000;
+}
+
+.totals .price {
+  color: #000;
+}
+
+.totals p {
+  color: #000;
+}
+
+.continue-button {
+  background-color: #8B0000;
+  border: none;
+  border-radius: 5px;
+}
+
+.right-side ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.right-side ul li .quantity input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.right-side ul li .quantity>button {
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0;
+}
+
+.right-side ul li .quantity button:hover {
+  background-color: #ccc;
+}
+
+/* Color Styles */
+
+.checkout .left-side-two {
+  background: #f4f5f7;
+}
+
+.input-group .change-button {
+  color: #fd803e;
+  background: #fff;
+}
+
+.back-button span {
+  color: #fd803e;
+}
+
+.shipping-method input[type="radio"] {
+  accent-color: var(--secondary-color);
+}
+
+.shipping-method input[type="radio"]:checked {
+  border: 1px solid var(--secondary-color);
+  background: var(--secondary-color);
+}
+
+.shipping-method input[type="radio"]:checked+label+span::before {
+  border: 1px solid var(--primary-color);
+}
+
+/* Color Styles */
+
+/* checkoutsection three */
+.payment-method-paypal {
+  background: #fff;
+}
+
+.card-logos {
+  background: #fff;
+}
+
+.card-logos a {
+  color: #000;
+}
+
+.remember-me>label {
+  color: #8f8e8e;
+}
+
+.credit-card-details label,
+.expiration-security label {
+  color: #333;
+}
+
+.credit-card-details input[type="text"],
+.expiration-security input[type="text"] {
+  background-color: #FFF;
+  color: #333;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-content {
+  background: #ffeef2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.top-section h2 {
+  color: green;
+}
+
+.item-card {
+  background: #ffeef2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.keep-shopping-button {
+  background: #8B0000;
+  color: #fff;
+  border: none;
+}

@@ -6,10 +6,9 @@
     <meta charset="UTF-8">
     <!-- Ensures the webpage is responsive and adapts to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/header.css">
-    <link rel="stylesheet" href="/style/main.css">
-    <link rel="stylesheet" href="/style/footer.css">
-    <link rel="stylesheet" href="/style/root.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/colors.css">
     <script src="/js/cart.js"></script>
 </head>
 
@@ -35,8 +34,8 @@
             </ul>
             <!-- Search bar -->
             <div class="search-container">
-                <form action="/html/search/search-result-page.html">
-                    <input type="search" placeholder="Search" class="search-input">
+                <form action="/html/search/search-result-page.html" method="GET">
+                    <input type="search" name="query" placeholder="Search" class="search-input">
                     <button type="submit" class="search-button">
                         <img src="/assets/icons/search-svgrepo-com.svg" alt="Search">
                     </button>
@@ -44,12 +43,15 @@
             </div>
             <!-- User profile, favorites, and cart icons -->
             <div>
-                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;" alt="Profile"></a>
-                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;" alt="Favorites"></a>
-                <a href="/html/payment/view-cart.html"><img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart"></a>
+                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;"
+                        alt="Profile"></a>
+                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;"
+                        alt="Favorites"></a>
+                <a href="/html/payment/view-cart.html"><img src="/assets/icons/cart.svg"
+                        style="width: 35px; height: 40px;" alt="Cart"></a>
             </div>
         </nav>
-    </header>    
+    </header>
     <!-- Main content area -->
     <main>
         <!-- Showcase section with product details -->
@@ -70,11 +72,12 @@
                         <div class="space"></div>
                         <div class="add-to-cart">
                             <button aria-label="Add to Cart" onclick="toggleCart()">
-                                <a href="javascript:void(0);">Add to Cart <img src="/assets/icons/cart-white.svg" alt="Cart"></a>
+                                <a href="javascript:void(0);">Add to Cart <img src="/assets/icons/cart-white.svg"
+                                        alt="Cart"></a>
                             </button>
-                        </div>             
+                        </div>
                     </div>
-                    
+
                     <div class="second-content">
                         <div class="second-content-header">
                             <span>What is Sifu?</span>
@@ -91,7 +94,7 @@
                             <div class="scrollable-container">
                                 <div class="all-figures">
                                     <figure>
-                                        <img src="/assets/images/scene-1.png" class="rounded" alt="Scene from Sifu">   
+                                        <img src="/assets/images/scene-1.png" class="rounded" alt="Scene from Sifu">
                                     </figure>
                                     <figure>
                                         <img src="/assets/images/scene-2.png" class="rounded" alt="Scene from Sifu">
@@ -101,7 +104,7 @@
                                     </figure>
                                 </div>
                             </div>
-                         </div>
+                        </div>
                     </div>
                 </div>
             </article>

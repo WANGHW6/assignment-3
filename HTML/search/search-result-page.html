@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <!-- Ensures the webpage is responsive and adapts to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/header.css">
-    <link rel="stylesheet" href="/style/main.css">
-    <link rel="stylesheet" href="/style/footer.css">
-    <link rel="stylesheet" href="../../style/root.css">
-    <link rel="stylesheet" href="search-page-style.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/colors.css">
+    <script src="/js/toggle_cart.js"></script>
+    <script src="/js/search.js"></script>
 </head>
 
 <body>
@@ -35,8 +35,8 @@
             </ul>
             <!-- Search bar -->
             <div class="search-container">
-                <form action="/html/search/search-result-page.html">
-                    <input type="search" placeholder="Search" class="search-input">
+                <form action="/html/search/search-result-page.html" method="GET">
+                    <input type="search" name="query" placeholder="Search" class="search-input">
                     <button type="submit" class="search-button">
                         <img src="/assets/icons/search-svgrepo-com.svg" alt="Search">
                     </button>
@@ -44,12 +44,67 @@
             </div>
             <!-- User profile, favorites, and cart icons -->
             <div>
-                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;" alt="Profile"></a>
-                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;" alt="Favorites"></a>
-                <a href="#cart"><img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart"></a>
+                <a href="#profile"><img src="/assets/icons/profile.svg" style="width: 35px; height: 40px;"
+                        alt="Profile"></a>
+                <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;"
+                        alt="Favorites"></a>
+                <a href="javascript:void(0);" onclick="toggleCartVisibility()">
+                    <div id="cart-icon-container">
+                        <img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart" id="cart-icon">
+                        <div id="cart-badge">0</div>
+                    </div>
+                </a>
             </div>
         </nav>
     </header>
+
+    <!-- Cart Preview-->
+    <div class="cart-container" style="display: none;">
+        <div class="cart-header">
+            <span>YOUR CART – <span id="cart-count">0</span> items total</span>
+            <button class="close-button" onclick="toggleCartVisibility()">&times;</button>
+        </div>
+        <hr>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <!-- <div class="cart-item">
+            <img src="/assets/images/call of duty.png" alt="SIFU">
+            <div class="item-details">
+                <div class="item-details-upper">
+                    <div class="item-details-left">
+                        <span class="item-name">SIFU</span>
+                        <span class="item-description">PS5 video game</span>
+                    </div>
+                    <div class="item-details-right">
+                        <img src="/assets/icons/bin.svg" alt="Delete Icon" class="delete-icon">
+                    </div>
+                </div>
+                <div class="item-details-lower">
+                    <span class="item-price">$69</span>
+                    <div class="item-quantity">
+                        <button class="quantity-button">-</button>
+                        <span class="quantity-value">1</span>
+                        <button class="quantity-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="cart-summary">
+            <div class="summary-details">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="summary-notation">
+                tax and shipping calculated at checkout.
+            </p>
+        </div>
+        <div class="cart-actions">
+            <button class="view-cart-button" onclick="location.href='/html/payment/view-cart.html'">view cart</button>
+            <button class="checkout-button" onclick="location.href='/html/payment/checkout.html'">Check Out</button>
+        </div>
+    </div>
+
 
     <!-- Main content area -->
     <main>
@@ -59,320 +114,191 @@
                 <input type="search" id="search" name="search" placeholder="search...">
             </div>
             <div class="search-filters">
-                <!-- Back button -->
-                <button aria-label="go-back">
-                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18l-6-6 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
                 <!-- Search results title -->
                 <h2 id="search-results-title">Result for “Ps5 Video Games”</h2>
                 <!-- Filter options -->
                 <div class="filter">
-                        <button aria-label="Filter results">Filter</button>
-                        <img src="/assets/icons/filter.svg" alt="Filter icon">
+                    <button aria-label="Filter results">Filter</button>
+                    <img src="/assets/icons/filter.svg" alt="Filter icon">
                 </div>
-                <div class="relevancy"> 
+                <div class="relevancy">
                     <button aria-label="Sort by relevancy">Relevancy</button>
-                    <img src="/assets/icons/relevancy.svg" alt="Relevancy icon">   
+                    <img src="/assets/icons/relevancy.svg" alt="Relevancy icon">
                 </div>
             </div>
         </section>
 
         <!-- Game cards section -->
         <section aria-labelledby="new-release">
+            <header>
+                <h2 id="new-release">NEW RELEASE</h2>
+                <img src="/assets/icons/right-icon-white.svg" class="svg-color" alt="">
+            </header>
+            <div class="grid-header">
+                <h3>What's hot!</h3>
+                <a href="#see-more">See more</a>
+            </div>
+
             <div class="game-grid">
-                <!-- Game card example -->
+                <!-- Game card example with image, title, price, rating, and actions -->
                 <article>
-                    <a href="/html/product/product-page-second.html">
-                        <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
-                        <h4>Final Fantasy XVI</h4>
-                        <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                        <div class="actions">
-                            <button aria-label="Add Final Fantasy XVI to favorites">
-                                <img src="/assets/icons/like.svg" alt="Like button">
-                            </button>
-                            <button aria-label="Add Final Fantasy XVI to cart">
-                                <img src="/assets/icons/cart.svg" alt="Cart icon">
-                            </button>
-                        </div>
-                    </a>
+                    <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI"
+                        onclick="window.location.href='/html/product/product-page-second.html'">
+                    <h4>Final Fantasy XVI</h4>
+                    <div class="price">
+                        <p>$69.00</p>
+                        <p><strong>8.4</strong>/10</p>
+                    </div>
+                    <div class="actions">
+                        <button aria-label="Add Final Fantasy XVI to favorites">
+                            <img src="/assets/icons/like.svg" alt="like-button">
+                        </button>
+                        <button aria-label="Add Final Fantasy XVI to cart" onclick="toggleCart(this)">
+                            <img src="/assets/icons/cart.svg" alt="cart-icon">
+                        </button>
+                    </div>
                 </article>
-                <!-- Additional game cards follow the same structure -->
+                <!-- Additional new release games follow the same structure -->
                 <article>
-                    <img src="/assets/images/Call of duty.png" alt="Call of Duty: Modern Warfare III">
+                    <img src="/assets/images/Call of duty.png" alt="Call of Duty: Modern Warfare III"
+                        onclick="window.location.href='/html/product/product-page-second.html'">
                     <h4>Call of Duty: Modern Warfare III</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
+                    <div class="price">
+                        <p>$69.00</p>
+                        <p><strong>8.4</strong>/10</p>
+                    </div>
                     <div class="actions">
                         <button aria-label="Add Call of Duty: Modern Warfare III to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
+                            <img src="/assets/icons/like.svg" alt="like-button">
                         </button>
-                        <button aria-label="Add Call of Duty: Modern Warfare III to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
+                        <button aria-label="Add Call of Duty: Modern Warfare III to cart" onclick="toggleCart(this)">
+                            <img src="/assets/icons/cart.svg" alt="cart-icon">
                         </button>
                     </div>
                 </article>
                 <article>
-                    <img src="/assets/images/Marvel's spider.png" alt="Marvel's Spider-Man 2">
+                    <img src="/assets/images/Marvel's spider.png" alt="Marvel's Spider-Man 2"
+                        onclick="window.location.href='/html/product/product-page-second.html'">
                     <h4>Marvel's Spider-Man 2</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
+                    <div class="price">
+                        <p>$69.00</p>
+                        <p><strong>8.4</strong>/10</p>
+                    </div>
                     <div class="actions">
                         <button aria-label="Add Marvel's Spider-Man 2 to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
+                            <img src="/assets/icons/like.svg" alt="like-button">
                         </button>
-                        <button aria-label="Add Marvel's Spider-Man 2 to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
+                        <button aria-label="Add Marvel's Spider-Man 2 to cart" onclick="toggleCart(this)">
+                            <img src="/assets/icons/cart.svg" alt="cart-icon">
                         </button>
                     </div>
                 </article>
                 <article>
-                    <img src="/assets/images/Rise of the ronin.png" alt="Rise of the Ronin">
+                    <img src="/assets/images/Rise of the ronin.png" alt="Rise of the Ronin"
+                        onclick="window.location.href='/html/product/product-page-second.html'">
                     <h4>Rise of the Ronin</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
+                    <div class="price">
+                        <p>$69.00</p>
+                        <p><strong>8.4</strong>/10</p>
+                    </div>
                     <div class="actions">
                         <button aria-label="Add Rise of the Ronin to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
+                            <img src="/assets/icons/like.svg" alt="like-button">
                         </button>
-                        <button aria-label="Add Rise of the Ronin to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
-                        </button>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Best Selling Section -->
-        <section aria-labelledby="best-selling">
-            <div class="game-grid">
-                <!-- Best selling game card example -->
-                <article>
-                    <img src="/assets/images/Dragon dogma.png" alt="Dragon's Dogma II">
-                    <h4>Dragon's Dogma II</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                    <div class="actions">
-                        <button aria-label="Add Dragon's Dogma II to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
-                        </button>
-                        <button aria-label="Add Dragon's Dogma II to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
-                        </button>
-                    </div>
-                </article>
-                <!-- Additional best selling game cards follow the same structure -->
-                <article>
-                    <img src="/assets/images/Avatar Frontiers of Pandora.png" alt="Avatar: Frontiers of Pandora">
-                    <h4>Avatar: Frontiers of Pandora</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                    <div class="actions">
-                        <button aria-label="Add Avatar: Frontiers of Pandora to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
-                        </button>
-                        <button aria-label="Add Avatar: Frontiers of Pandora to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
-                        </button>
-                    </div>
-                </article>
-                <article>
-                    <img src="/assets/images/Assassin's Creed.png" alt="Assassin's Creed Mirage">
-                    <h4>Assassin's Creed Mirage</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                    <div class="actions">
-                        <button aria-label="Add Assassin's Creed Mirage to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
-                        </button>
-                        <button aria-label="Add Assassin's Creed Mirage to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
-                        </button>
-                    </div>
-                </article>
-                <article>
-                    <img src="/assets/images/Tekken.png" alt="TEKKEN 8">
-                    <h4>TEKKEN 8</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                    <div class="actions">
-                        <button aria-label="Add TEKKEN 8 to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
-                        </button>
-                        <button aria-label="Add TEKKEN 8 to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
-                        </button>
-                    </div>
-                </article>
-                <article>
-                    <img src="/assets/images/god of was.png" alt="God of War Ragnarök">
-                    <h4>God of War Ragnarök</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                    <div class="actions">
-                        <button aria-label="Add God of War Ragnarök to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
-                        </button>
-                        <button aria-label="Add God of War Ragnarök to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
-                        </button>
-                    </div>
-                </article>
-                <article>
-                    <img src="/assets/images/stellar blade.png" alt="Stellar Blade">
-                    <h4>Stellar Blade</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                    <div class="actions">
-                        <button aria-label="Add Stellar Blade to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
-                        </button>
-                        <button aria-label="Add Stellar Blade to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
-                        </button>
-                    </div>
-                </article>
-                <article>
-                    <img src="/assets/images/Assassin's Creed.png" alt="Assassin's Creed Mirage">
-                    <h4>Assassin's Creed Mirage</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                    <div class="actions">
-                        <button aria-label="Add Assassin's Creed Mirage to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
-                        </button>
-                        <button aria-label="Add Assassin's Creed Mirage to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
-                        </button>
-                    </div>
-                </article>
-                <article>
-                    <img src="/assets/images/Tekken2.png" alt="TEKKEN 8">
-                    <h4>TEKKEN 8</h4>
-                     <div class="price">
-                            <p>$69.00</p>
-                            <p><strong>8.4</strong>/10</p>
-                        </div>
-                    <div class="actions">
-                        <button aria-label="Add TEKKEN 8 to favorites">
-                            <img src="/assets/icons/like.svg" alt="Like button">
-                        </button>
-                        <button aria-label="Add TEKKEN 8 to cart">
-                            <img src="/assets/icons/cart.svg" alt="Cart icon">
+                        <button aria-label="Add Rise of the Ronin to cart" onclick="toggleCart(this)">
+                            <img src="/assets/icons/cart.svg" alt="cart-icon">
                         </button>
                     </div>
                 </article>
             </div>
         </section>
-    </main>
 
-    <!-- Footer section -->
-    <footer>
-        <section aria-labelledby="join-us">
-            <h2 id="join-us">JOIN US!</h2>
-            <p>Subscribe now and be the first to know about <strong style="color: #F50808;">Exclusive Offers - Deals -
-                    Sales - New Releases and
-                    MORE!</strong></p>
-            <form action="#" method="post">
-                <input type="email" id="email" name="email" placeholder="Your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
-        <section aria-labelledby="footer-bottom">
-            <section aria-labelledby="features">
-                <div class="features-grid">
-                    <article>
-                        <img src="/assets/icons/top-notch support.svg" alt="Top-notch support">
-                        <h3>Top-notch support</h3>
-                        <span>Years of experience in customer service.</span>
-                    </article>
-                    <article>
-                        <img src="/assets/icons/shipping internationally.svg" alt="Shipping Internationally">
-                        <h3>Shipping Internationally</h3>
-                        <span>International orders processed weekly.</span>
+        <!-- Footer section -->
+        <footer>
+            <section aria-labelledby="join-us">
+                <h2 id="join-us">JOIN US!</h2>
+                <p>Subscribe now and be the first to know about <strong style="color: #F50808;">Exclusive Offers - Deals
+                        -
+                        Sales - New Releases and
+                        MORE!</strong></p>
+                <form action="#" method="post">
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+            <section aria-labelledby="footer-bottom">
+                <section aria-labelledby="features">
+                    <div class="features-grid">
+                        <article>
+                            <img src="/assets/icons/top-notch support.svg" alt="Top-notch support">
+                            <h3>Top-notch support</h3>
+                            <span>Years of experience in customer service.</span>
+                        </article>
+                        <article>
+                            <img src="/assets/icons/shipping internationally.svg" alt="Shipping Internationally">
+                            <h3>Shipping Internationally</h3>
+                            <span>International orders processed weekly.</span>
 
-                    </article>
-                    <article>
-                        <img src="/assets/icons/satisfied or refunded.svg" alt="Satisfied or refunded">
-                        <h3>Satisfied or refunded</h3>
-                        <span>60 days warranty storewide.</span>
-                    </article>
-                    <article>
-                        <img src="/assets/icons/secure payments.svg" alt="Secure payments">
-                        <h3>Secure payments</h3>
-                        <span>Payment options to suit everyone.</span>
-                    </article>
-                </div>
-            </section>
-            <section aria-labelledby="disclaimer">
-                <header>
-                    <p id="disclaimer">DISCLAIMER</p>
-                    <button>
-                        <img src="/assets/icons/plus-icon.svg" alt="Expand">
-                    </button>
-                </header>
-                <p>
-                    Please note that games and genuine products are all preowned and have previously been used unless
-                    otherwise stated. Some scuffs and scratches from use are likely.
-                    Images in product description is a general indication and not necessarily an exact image. Brand New
-                    and/or sealed items will not be tested.
-                    Please refer to our refunds policy.
-                </p>
-            </section>
-            <button><img src="/assets/icons/plus-icon.svg" alt="Expand"></button>
-            <section aria-labelledby="footer-bottom-option">
-                <ul>
-                    <li><a href="#about-us">ABOUT US</a></li>
-                    <li><a href="#customer-reviews">CUSTOMER REVIEWS</a></li>
-                    <li><a href="#delivery">DELIVERY</a></li>
-                    <li><a href="#afterpay">AFTERPAY</a></li>
-                    <li><a href="#privacy-policy">PRIVACY POLICY</a></li>
-                    <li><a href="#warranty">WARRANTY</a></li>
-                    <li><a href="#tos">TOS</a></li>
-                </ul>
-                <div class="bottom-row">
-                    <div class="social-media">
-                        <p>Follow Us</p>
-                        <a href="#">
-                            <img src="/assets/icons/facebook.svg" alt="Facebook">
-                            <img src="/assets/icons/instagram.svg" alt="Instagram">
-                        </a>
+                        </article>
+                        <article>
+                            <img src="/assets/icons/satisfied or refunded.svg" alt="Satisfied or refunded">
+                            <h3>Satisfied or refunded</h3>
+                            <span>60 days warranty storewide.</span>
+                        </article>
+                        <article>
+                            <img src="/assets/icons/secure payments.svg" alt="Secure payments">
+                            <h3>Secure payments</h3>
+                            <span>Payment options to suit everyone.</span>
+                        </article>
                     </div>
-                    <div class="we-accept">
-                        <p>We Accept</p>
-                        <img src="/assets/icons/s-payment.svg" alt="Payment Options">
-                        <img src="/assets/icons/paypal.svg" alt="PayPal Icon">
+                </section>
+                <section aria-labelledby="disclaimer">
+                    <header>
+                        <p id="disclaimer">DISCLAIMER</p>
+                        <button>
+                            <img src="/assets/icons/plus-icon.svg" alt="Expand">
+                        </button>
+                    </header>
+                    <p>
+                        Please note that games and genuine products are all preowned and have previously been used
+                        unless
+                        otherwise stated. Some scuffs and scratches from use are likely.
+                        Images in product description is a general indication and not necessarily an exact image. Brand
+                        New
+                        and/or sealed items will not be tested.
+                        Please refer to our refunds policy.
+                    </p>
+                </section>
+                <button><img src="/assets/icons/plus-icon.svg" alt="Expand"></button>
+                <section aria-labelledby="footer-bottom-option">
+                    <ul>
+                        <li><a href="#about-us">ABOUT US</a></li>
+                        <li><a href="#customer-reviews">CUSTOMER REVIEWS</a></li>
+                        <li><a href="#delivery">DELIVERY</a></li>
+                        <li><a href="#afterpay">AFTERPAY</a></li>
+                        <li><a href="#privacy-policy">PRIVACY POLICY</a></li>
+                        <li><a href="#warranty">WARRANTY</a></li>
+                        <li><a href="#tos">TOS</a></li>
+                    </ul>
+                    <div class="bottom-row">
+                        <div class="social-media">
+                            <p>Follow Us</p>
+                            <a href="#">
+                                <img src="/assets/icons/facebook.svg" alt="Facebook">
+                                <img src="/assets/icons/instagram.svg" alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="we-accept">
+                            <p>We Accept</p>
+                            <img src="/assets/icons/s-payment.svg" alt="Payment Options">
+                            <img src="/assets/icons/paypal.svg" alt="PayPal Icon">
+                        </div>
                     </div>
-                </div>
+                </section>
+                <p>© 2024 Games We Played</p>
             </section>
-            <p>© 2024 Games We Played</p>
-        </section>
 
-    </footer>
+        </footer>
 </body>
 
 </html>

@@ -1,64 +1,321 @@
+/* Typography Styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    color: var(--color-dark);
 }
 
-h2, h3, h4 {
-    margin-bottom: 10px;
+
+main section[aria-labelledby="search-section"] .search-bar input[type="search"] {
+    font-size: var(--main-normal-text-size);
 }
 
-h2 {
-    font-size: 2em;
+main section[aria-labelledby="search-section"] .search-filters h2 {
+    margin-left: 0;
 }
 
-h3 {
-    font-size: 1.5em;
+
+/* Header */
+body>header {
+    background-color: var(--color-light);
+    border-bottom: 1px solid var(--color-medium-gray);
 }
 
-h4 {
-    font-size: 1.2em;
+/* Navigation links */
+header nav ul {
+    background: var(--primary-color-light);
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.5;
+header nav ul li a:hover,
+header nav ul li.active {
+    background-color: #ffd6dc;
+    color: var(--primary-color);
 }
 
-.footer p {
-    font-size: 14px;
-    color: #666;
+header nav ul li:first-child a {
+    background-color: var(--primary-color);
+    color: var(--color-light);
 }
 
-.showcase .content h2 {
-    font-size: 3em;
+/* Search bar */
+.search-container form {
+    background-color: var(--primary-color-light);
 }
 
-.showcase .content p {
-    margin-bottom: 10px;
+.search-button {
+    background-color: var(--primary-color);
 }
 
-.showcase .content .price-like span {
-    font-size: 2em;
+.search-button:hover {
+    background-color: darken(var(--primary-color), 10%);
+    /* Darken color on hover */
+}
+
+/* footer */
+
+footer {
+    font-family: var(--font-family);
+}
+
+footer section[aria-labelledby="join-us"] p {
+    text-align: left;
+}
+
+footer section[aria-labelledby="join-us"] form input[type="email"] {
+    font-size: var(--main-normal-text-size);
+}
+
+footer section[aria-labelledby="join-us"] form button {
+    font-size: var(--main-normal-text-size);
 }
 
 footer h2 {
-    font-size: 24px;
-    color: #222;
-}
-
-footer h3 {
-    font-size: 18px;
-    color: #0c64f7;
+    font-size: var(--main-title-size);
+    margin-bottom: 10px;
 }
 
 footer p {
-    font-size: 16px;
-    color: #333;
+    font-size: var(--main-normal-text-size);
+    line-height: 1.5;
 }
 
-footer .features-grid p,
-footer .features-grid article span {
+.features-grid h3 {
+    font-size: var(--main-title-size);
+    margin-bottom: 5px;
+}
+
+.features-grid p,
+.features-grid article span {
+    font-size: var(--main-normal-text-size);
+}
+
+section[aria-labelledby="disclaimer"] header p,
+section[aria-labelledby="footer-bottom-option"] .social-media p,
+section[aria-labelledby="footer-bottom-option"] .we-accept p,
+section[aria-labelledby="footer-bottom-option"] ul li,
+#disclaimer p {
+    font-size: var(--main-normal-text-size);
+}
+
+
+section[aria-labelledby="disclaimer"]>p {
+    line-height: 2.5;
+    text-align: start;
+    column-gap: 5;
+    font-size: var(--main-normal-text-size);
+}
+
+#disclaimer h2 {
+    font-size: var(--main-title-size);
+    margin-bottom: 5px;
+}
+
+section[aria-labelledby="footer-bottom-option"] ul li a {
+    text-decoration: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.showcase .content .first-content>h2 {
+    font-size: var(--main-content-h2);
+}
+
+.showcase .content>.first-content p {
+    font-size: var(--main-title-size);
+}
+
+.showcase .content .first-content>.price-like {
+    font-size: var(--main-normal-text-size);
+}
+
+.showcase .content .first-content .price-like>span {
+    font-size: var(--main-title-size);
+}
+
+.showcase .content .first-content .add-to-cart button>a {
+    font-size: var(--main-normal-text-size);
+    font-weight: 1000;
+}
+
+.showcase .content .second-content .second-content-header p {
+    line-height: 22px;
+}
+
+/* Typography Styles */
+
+section[aria-labelledby="new-release"] header>h2 {
+    font-size: var(--main-title-size);
+}
+
+section[aria-labelledby="new-release"] .grid-header h3 {
+    font-size: var(--main-title-size);
+    font-weight: 1000;
+}
+
+section[aria-labelledby="new-release"] .grid-header a {
+    font-size: var(--main-normal-text-size);
+}
+
+section[aria-labelledby="featured-games"] .horizontal-slider .description button>p {
+    font-weight: 1000;
+    line-height: normal;
+    text-align: start;
+}
+
+.game-grid article h4 {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.first-content .platforms {
+    font-size: var(--main-title-size);
+    margin: 0;
+    padding: 0;
+}
+
+.game-grid article p {
+    margin-bottom: 5px;
+}
+
+.game-grid article .price strong {
+    color: var(--available-stock-color);
+}
+
+.game-grid .actions button img {
+    margin: 0;
+}
+
+/* Typography Styles */
+
+#cart-summary,
+#order-summary {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    width: 100%;
+}
+
+section[aria-labelledby="cart-summary"] ul li .cart-name span {
+    font-weight: 1000;
+    margin-bottom: 10px;
+    line-height: 15px;
+}
+
+section[aria-labelledby="cart-summary"] ul li .cart-name>p {
+    margin: 0;
+    text-align: start;
+}
+
+section[aria-labelledby="cart-summary"] ul li div .item-details p {
+    margin: 0;
+}
+
+section[aria-labelledby="cart-summary"] ul li div .item-details p:first-child {
+    font-weight: bold;
+}
+
+section[aria-labelledby="cart-summary"] ul li .quantity button {
+    font-size: 16px;
+}
+
+section[aria-labelledby="cart-summary"] p {
+    font-size: 14px;
+}
+
+/* Typography Styles */
+
+aside[aria-labelledby="order-summary"] .lower-layer .lower-layer-title h2 {
+    margin: 0;
+    padding: 0;
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer p,
+aside[aria-labelledby="order-summary"] .lower-layer span {
+    font-size: 18px;
+    margin: 10px 0;
+    font-size: var(--main-normal-text-size);
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer textarea {
+    font-size: 14px;
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer .cart-actions button,
+aside[aria-labelledby="order-summary"] .lower-layer .cart-actions>.continue-button {
+    font-size: 16px;
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer .cart-actions>.continue-button {
+    font-weight: 1000;
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer .payment-methods a {
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer .payment-methods a:hover {
+    text-decoration: underline;
+}
+
+#cart-badge {
+    font-family: var(--font-family);
+}
+
+
+.cart-container {
+    font-family: var(--font-family);
+    background-color: var(--primary-color-light);
+}
+
+.cart-container .cart-header>span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.cart-container .item-name,
+.cart-container .cart-header {
+    font-weight: bold;
+}
+
+.cart-container .item-description {
+    color: gray;
     font-size: 12px;
-    color: #96a0a6;
+}
+
+.cart-container .item-price {
+    font-weight: bold;
+    font-size: var(--mobile-small-font-size)
+}
+
+.cart-container .summary-details {
+    font-size: var(--mobile-small-font-size)
+}
+
+.cart-container .view-cart-button {
+    font-weight: 1000;
+}
+
+.cart-container .summary-details>span {
+    font-weight: 700;
+    font-size: var(--main-normal-text-size);
+}
+
+.cart-container .cart-summary .summary-notation {
+    font-size: 11px;
+    margin: 0;
 }

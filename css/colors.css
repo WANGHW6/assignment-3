@@ -1,6 +1,289 @@
+/* Color Styles */
+
 :root {
-    --primary-color : #F43756;
+    --primary-color: #F43756;
     --on-primary-color: #FFFFFF;
     --primary-color-light: #F9E9EC;
     --secondary-color: #7C1C19;
+    --gray-color-second: #796f6f;
+    --available-stock-color: #cf6e38;
+    --main-content-h2: 3em;
+    --main-title-size: 20px;
+    --main-normal-text-size: 16px;
+    --font-family: 'Poppins', sans-serif;
+    --color-dark: #333;
+    --color-gray: #777;
+    --color-light: #fff;
+    --color-dark-gray: #5D5D5D;
+    --color-medium-gray: #ddd;
+    --color-highlight: #fd803e;
+    --background-light: #f4f5f7;
+    --background-dark: #000;
+    --background-gray: #f8f8f8;
+    --background-highlight: #ffeef2;
+}
+
+main section[aria-labelledby="search-section"] {
+    background: var(--primary-color-light);
+}
+
+main section[aria-labelledby="search-section"] .search-bar input[type="search"] {
+    background: #fff;
+}
+
+main section[aria-labelledby="search-section"] .search-filters .filter,
+main section[aria-labelledby="search-section"] .search-filters .relevancy {
+    background: #fff;
+}
+
+.search-results button[aria-label="Go back"] {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-results button[aria-label="Go back"] svg {
+    stroke: #000;
+}
+
+/* footer */
+
+footer {
+    color: var(--color-dark);
+    background: var(--primary-color-light);
+}
+
+footer #join-us {
+    color: var(--on-primary-color);
+}
+
+footer section[aria-labelledby="join-us"] {
+    background: var(--background-dark);
+}
+
+footer section[aria-labelledby="join-us"] p {
+    color: #96a0a6;
+}
+
+footer section[aria-labelledby="join-us"] form button {
+    background-color: #e63946;
+    color: var(--color-light);
+}
+
+footer section[aria-labelledby="footer-bottom"]>button,
+footer section[aria-labelledby="footer-bottom"]>header,
+section[aria-labelledby="disclaimer"] header>button,
+section[aria-labelledby="disclaimer"]>header {
+    background: var(--primary-color-light);
+}
+
+footer h2 {
+    color: #222;
+}
+
+.features-grid h3,
+.features-grid p {
+    color: #0c64f7;
+}
+
+.features-grid article span {
+    color: #96a0a6;
+}
+
+section[aria-labelledby="disclaimer"] header p {
+    color: #1e2d7d;
+}
+
+section[aria-labelledby="disclaimer"]>p {
+    color: #000;
+}
+
+#disclaimer p {
+    color: #666;
+}
+
+section[aria-labelledby="footer-bottom-option"] .social-media p,
+section[aria-labelledby="footer-bottom-option"] .we-accept p {
+    color: #000;
+}
+
+section[aria-labelledby="footer-bottom-option"] ul li a {
+    color: #000;
+}
+
+
+.showcase {
+    background-color: var(--background-gray);
+}
+
+main .showcase .content {
+    color: var(--color-light);
+}
+
+main>button {
+    color: #e67e22;
+}
+
+.showcase .content .first-content .price-like>span {
+    background: var(--gray-color-second);
+}
+
+.showcase .content .first-content .price-like button {
+    background: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.showcase .content>.first-content .add-to-cart {
+    background: var(--secondary-color);
+}
+
+.showcase .content .first-content .add-to-cart button>a {
+    color: var(--color-light);
+}
+
+/* Color Styles */
+
+section[aria-labelledby="new-release"]>header {
+    background: #b6b2af;
+    color: var(--color-light);
+}
+
+section[aria-labelledby="new-release"] .grid-header a {
+    color: var(--gray-color-second);
+}
+
+section[aria-labelledby="featured-games"] .horizontal-slider .description button>p {
+    background: var(--color-light);
+}
+
+.game-grid article {
+    background-color: var(--background-light);
+}
+
+.game-grid article h4 {
+    color: var(--color-dark);
+}
+
+.game-grid article p {
+    color: var(--color-gray);
+}
+
+.game-grid article .price strong {
+    color: var(--available-stock-color);
+}
+
+.add-to-cart-two {
+    background: var(--secondary-color);
+}
+
+/* Color Styles */
+
+.cart-summary-container {
+    background-color: var(--background-light);
+}
+
+#cart-summary,
+#order-summary {
+    color: var(--color-dark);
+}
+
+section[aria-labelledby="cart-summary"] ul li {
+    border-bottom: 1px solid var(--color-light);
+    background-color: var(--color-light);
+}
+
+section[aria-labelledby="cart-summary"] ul li div .item-details p {
+    color: var(--color-dark);
+}
+
+section[aria-labelledby="cart-summary"] ul li .quantity button {
+    background-color: var(--color-medium-gray);
+    border: none;
+}
+
+section[aria-labelledby="cart-summary"] ul li .quantity input {
+    border: 1px solid var(--color-medium-gray);
+}
+
+
+section[aria-labelledby="cart-summary"] p {
+    color: #555;
+}
+
+section[aria-labelledby="cart-summary"] ul li .quantity button:hover {
+    background-color: var(--color-medium-gray);
+}
+
+/* Color Styles */
+
+aside[aria-labelledby="order-summary"] .upper-layer {
+    background: red;
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer {
+    background-color: var(--background-highlight);
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer p,
+aside[aria-labelledby="order-summary"] .lower-layer span,
+aside[aria-labelledby="order-summary"] .lower-layer label {
+    color: var(--color-dark);
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer .cart-actions button {
+    background-color: var(--secondary-color);
+    color: var(--color-light);
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer .cart-actions>.continue-button {
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer .cart-actions button:hover {
+    background-color: #e67e22;
+}
+
+aside[aria-labelledby="order-summary"] .lower-layer .payment-methods a {
+    color: #3498db;
+}
+
+#cart-badge {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+.cart-container {
+    background-color: var(--primary-color-light);
+}
+
+
+.cart-container .cart-item {
+    background: #fff;
+}
+
+
+.cart-container .cart-summary {
+    background: #e3c6c5;
+}
+
+.cart-container .view-cart-button {
+    background: none;
+    color: var(--secondary-color);
+}
+
+.cart-container .checkout-button {
+    background-color: var(--secondary-color);
+    color: var(--color-light);
+}
+
+.cart-container .view-cart-button:hover,
+.cart-container .checkout-button:hover {
+    background-color: #991f1f;
 }

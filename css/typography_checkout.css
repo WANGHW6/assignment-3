@@ -1,0 +1,190 @@
+/* Typography Styles */
+
+main>h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+nav[aria-label="breadcrumb"] {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+nav[aria-label="breadcrumb"] ul li {
+  font-weight: 700;
+}
+
+.checkout .left-side .contact-title .contact-login-title span,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography Styles */
+
+legend {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+fieldset [type="email"],
+input[type="text"],
+input[type="password"],
+select {
+  font-size: 1em;
+}
+
+header h2 {
+  font-size: 24px;
+}
+
+.item-details p:first-child {
+  font-weight: bold;
+  margin: 0;
+}
+
+.item-details p:last-child {
+  margin: 5px 0 0 0;
+}
+
+.item-quantity p {
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+
+.gift-card>button {
+  font-size: 18px;
+  color: #FFF;
+}
+
+.totals {
+  font-size: 16px;
+}
+
+.totals .price {
+  font-weight: 700;
+}
+
+.totals p {
+  font-weight: 700;
+}
+
+.continue-button {
+  font-size: 16px;
+  color: #FFF;
+}
+
+.right-side ul li .cart-name span {
+  font-weight: 1000;
+  line-height: 15px;
+}
+
+.right-side ul li div .item-details p {
+  color: #333;
+}
+
+.right-side ul li div .item-details p:first-child {
+  font-weight: bold;
+}
+
+.right-side p {
+  font-size: 14px;
+  color: #555;
+}
+
+.right-side ul li .quantity>button {
+  font-size: 16px;
+}
+
+.checkout .left-side-two .contact>label {
+  font-size: var(--text-normal-size);
+  margin-bottom: 8px;
+}
+
+.checkout .left-side-two .shipping>label {
+  font-size: var(--text-normal-size);
+}
+
+.shipping label,
+.left-side-two .contact label {
+  font-weight: 1000;
+}
+
+.shipping-method>label {
+  font-size: 16px;
+  display: block;
+}
+
+.shipping-method div {
+  font-size: var(--text-normal-size);
+}
+
+.back-button span {
+  font-size: var(--text-normal-size);
+}
+
+.shipping-method>label {
+  font-weight: bold;
+}
+
+/* Typography Styles */
+
+/* checkoutsection three */
+.payment-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.payment-section p {
+  font-size: 14px;
+}
+
+.payment-method-paypal>label {
+  font-size: 12px;
+}
+
+.payment-method label {
+  font-size: 9px;
+}
+
+.card-logos a {
+  font-size: 12px;
+}
+
+.card-logos a:hover {
+  text-decoration: underline;
+}
+
+.credit-card-details label,
+.expiration-security label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.remember-me>label {
+  font-size: 13px;
+}
+
+.top-section h2 {
+  margin: 0;
+}
+
+.left-summary h5 {
+  padding: 0;
+  text-align: start;
+  margin-bottom: 15px;
+}
+
+.item-name {
+  font-weight: bold;
+  text-align: start;
+}
+
+.item-type {
+  text-align: start;
+}

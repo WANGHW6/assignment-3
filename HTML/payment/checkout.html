@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <!-- Ensures the webpage is responsive and adapts to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/header.css">
-    <link rel="stylesheet" href="/style/main.css">
-    <link rel="stylesheet" href="/style/footer.css">
-    <link rel="stylesheet" href="../../style/root.css">
-    <link rel="stylesheet" href="../../style/checkout-style.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="/css/layout_checkout.css">
+    <link rel="stylesheet" href="/css/colors_checkout.css">
+    <link rel="stylesheet" href="/css/typography_checkout.css">
     <script src="/js/checkout.js"></script>
 </head>
 
@@ -48,8 +49,12 @@
                         alt="Profile"></a>
                 <a href="#favorites"><img src="/assets/icons/favorite.svg" style="width: 35px; height: 40px;"
                         alt="Favorites"></a>
-                <a href="#cart"><img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;"
-                        alt="Cart"></a>
+                <a href="javascript:void(0);" onclick="">
+                    <div id="cart-icon-container">
+                        <img src="/assets/icons/cart.svg" style="width: 35px; height: 40px;" alt="Cart" id="cart-icon">
+                        <div id="cart-badge" style="display: block;">3</div>
+                    </div>
+                </a>
             </div>
         </nav>
     </header>
@@ -67,7 +72,7 @@
             </ul>
         </nav>
 
-        <section class="checkout" style="display: none;">
+        <section class="checkout" style="display: flex;">
             <div class="left-side">
                 <header class="contact-title">
                     <h2>Contact</h2>
@@ -79,10 +84,10 @@
                 <form>
                     <fieldset>
                         <label for="email">Your email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email">
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
 
                         <label for="country">Country/Region</label>
-                        <select id="country" name="country">
+                        <select id="country" name="country" required>
                             <!-- Add country options here -->
                             <option value="Australia">Australia</option>
                             <option value="China">China</option>
@@ -95,54 +100,74 @@
                             <option value="United States">United States</option>
                             <option value="South Korea">South Korea</option>
                             <option value="Vietnam">Vietnam</option>
-                            <option value="Vietnam">Canada</option>
-                            <option value="Vietnam">Congo</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Congo">Congo</option>
                         </select>
 
                         <div class="address-group">
                             <div>
                                 <label for="city">City</label>
-                                <input type="text" id="city" name="city" placeholder="City">
+                                <input type="text" id="city" name="city" placeholder="City" required>
                             </div>
                             <div>
                                 <label for="state">State</label>
-                                <input type="text" id="state" name="state" placeholder="State">
+                                <input type="text" id="state" name="state" placeholder="State" required>
                             </div>
                             <div>
                                 <label for="postcode">Postcode</label>
-                                <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+                                <input type="text" id="postcode" name="postcode" placeholder="Postcode" required>
                             </div>
                         </div>
 
                         <label for="name-on-card">Name on card</label>
-                        <input type="text" id="name-on-card" name="name-on-card" placeholder="Name on card">
+                        <input type="text" id="name-on-card" name="name-on-card" placeholder="Name on card" required>
 
                         <label for="card-number">Card Number</label>
-                        <input type="text" id="card-number" name="card-number" placeholder="Card Number">
+                        <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
 
-                        <!-- <input type="checkbox" id="subscribe" name="subscribe"> -->
+                        <div class="expiration-security">
+                            <div>
+                                <label for="expiration-date">Expiration date</label>
+                                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="security-code">Security code</label>
+                                <input type="text" id="security-code" name="security-code" placeholder="CVC" required>
+                            </div>
+                        </div>
+
                     </fieldset>
 
-                    <span>Card type</span>
-                    <div class="card-type">
-                        
-                        <img src="/assets/images/mastercard.png" alt="MasterCard">
-                        <img src="/assets/images/visa.png" alt="Visa">
-                        <img src="/assets/images/RuPay.png" alt="RuPay">
-                        <a href="#see-all">See all</a>
-                        <!-- Add more card types as needed -->
+                    <p>All transactions are secure and encrypted</p>
+
+                    <div class="payment-method">
+                        <div class="card-logos">
+                            <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
+                            <label for="credit-card">Credit card</label>
+                            <img src="/assets/images/mastercard.png" alt="MasterCard">
+                            <img src="/assets/images/visa.png" alt="Visa">
+                            <img src="/assets/images/rupay.png" alt="RuPay">
+                            <a href="#see-all">See all</a>
+                        </div>
+                    </div>
+                    <div class="payment-method-paypal">
+                        <input type="radio" id="paypal" name="payment" value="paypal">
+                        <label for="paypal">Paypal</label>
+                    </div>
+                    <div class="payment-method-paypal">
+                        <input type="radio" id="purchase-order" name="payment" value="purchase-order">
+                        <label for="purchase-order">Purchase order</label>
                     </div>
                 </form>
             </div>
-
 
             <div class="right-side">
                 <header>
                     <h2>Order Summary</h2>
                 </header>
-
                 <ul>
-                    <!-- Cart item -->
+                    <!-- Cart items here -->
                     <li>
                         <img src="/assets/images/Final Fantasy XVI.png" alt="Final Fantasy XVI">
                         <div>
@@ -199,7 +224,6 @@
                         </div>
                     </li>
                 </ul>
-
                 <div class="gift-card">
                     <input type="text" id="gift-card" placeholder="Gift card discount code">
                     <button type="button">→</button>
@@ -208,14 +232,14 @@
                 <div class="totals">
                     <div class="price">
                         <p>Subtotal:</p>
-                        <p> $207</p>
+                        <p>$207</p>
                     </div>
                     <div class="price">
                         <p>Shipping:</p>
                         <p>Calculated after filling shipping address</p>
                     </div>
                     <div class="price">
-                        <p>Total: </p>
+                        <p>Total:</p>
                         <p>AUD$211</p>
                     </div>
                     <p>Including $4 in taxes</p>
@@ -226,28 +250,27 @@
             </div>
         </section>
 
-
         <!--Checkout Section one -->
-        <section class="checkout" style="display: flex;">
+        <section class="checkout" style="display: none;">
             <div class="left-side-two">
                 <div class="contact">
                     <label for="contact">Contact</label>
                     <div class="input-group">
-                        <input type="text" id="contact" name="contact">
+                        <input type="text" id="contact" name="contact" readonly>
                         <button class="change-button">change</button>
                     </div>
                 </div>
                 <div class="shipping">
                     <label for="ship-to">Ship to</label>
                     <div class="input-group">
-                        <input type="text" id="ship-to" name="ship-to">
+                        <input type="text" id="ship-to" name="ship-to" readonly>
                         <button class="change-button">change</button>
                     </div>
                 </div>
                 <div class="shipping-method">
                     <label for="shipping-method">Shipping</label>
                     <div class="standard">
-                        <input type="radio" id="standard" name="shipping" checked="checked" value="standard">
+                        <input type="radio" id="standard" name="shipping" value="standard" checked>
                         <label for="standard">Standard</label>
                         <span>Free</span>
                     </div>
@@ -256,7 +279,6 @@
                         <label for="express">Express</label>
                         <span>$4</span>
                     </div>
-
                 </div>
                 <div class="back-button">
                     <img src="/assets/icons/back-btn-icon.svg" alt="back button icon">
@@ -351,7 +373,6 @@
                     <button class="continue-button">Continue to payment</button>
                 </div>
             </div>
-
         </section>
 
         <!-- checkout section two -->
@@ -360,21 +381,21 @@
                 <div class="contact">
                     <label for="contact">Contact</label>
                     <div class="input-group">
-                        <input type="text" id="contact" name="contact">
+                        <input type="text" id="contact" name="contact" readonly>
                         <button class="change-button">change</button>
                     </div>
                 </div>
                 <div class="shipping">
                     <label for="ship-to">Ship to</label>
                     <div class="input-group">
-                        <input type="text" id="ship-to" name="ship-to">
+                        <input type="text" id="ship-to" name="ship-to" readonly>
                         <button class="change-button">change</button>
                     </div>
                 </div>
                 <div class="shipping-method">
                     <label for="shipping-method">Shipping</label>
                     <div class="standard">
-                        <input type="radio" id="standard" name="shipping" value="standard">
+                        <input type="radio" id="standard" name="shipping" checked="checked" value="standard">
                         <label for="standard">Standard</label>
                         <span>Free</span>
                     </div>
@@ -400,17 +421,20 @@
                         </div>
                         <div class="credit-card-details">
                             <label for="card-number">Card number</label>
-                            <input type="text" id="card-number" name="card-number" placeholder="Card number">
+                            <input type="text" id="card-number" name="card-number" placeholder="Card number" readonly>
                             <label for="name-on-card">Name on card</label>
-                            <input type="text" id="name-on-card" name="name-on-card" placeholder="Name on card">
+                            <input type="text" id="name-on-card" name="name-on-card" placeholder="Name on card"
+                                readonly>
                             <div class="expiration-security">
                                 <div>
                                     <label for="expiration-date">Expiration date</label>
-                                    <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY">
+                                    <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY"
+                                        readonly>
                                 </div>
                                 <div>
                                     <label for="security-code">Security code</label>
-                                    <input type="text" id="security-code" name="security-code" placeholder="CVC">
+                                    <input type="text" id="security-code" name="security-code" placeholder="CVC"
+                                        readonly>
                                 </div>
                             </div>
                         </div>
@@ -552,13 +576,13 @@
                                 <p class="item-type">PS5 video game</p>
                             </div>
                         </div>
-                        <h5>delivering to</h5>
-                        <h5>Estimated delivery:</h5>
+                        <h5>delivering to Australia</h5>
+                        <h5>Estimated delivery: 2024-07-02</h5>
                     </div>
                     <div class="right-summary">
                         <p><strong>Invoice:</strong></p>
                         <p>Number: INV-4953-23-1234</p>
-                        <p>Date: 19 05 2024</p>
+                        <p>Date: 05 06 2024</p>
                         <p><strong>Seller:</strong></p>
                         <p>123 Main Street City, State12345</p>
                         <p>Phone: 555-555-1234</p>
@@ -573,7 +597,8 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="keep-shopping-button"onclick="window.location.href='/index.html'">Keep shopping</button>
+                    <button class="keep-shopping-button" onclick="window.location.href='/index.html'">Keep
+                        shopping</button>
                 </div>
             </div>
         </section>
