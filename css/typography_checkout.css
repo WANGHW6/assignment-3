@@ -160,6 +160,11 @@ input::placeholder {
   text-decoration: underline;
 }
 
+.payment-method .card-logos>label {
+  font-size: 12px;
+}
+
+
 .credit-card-details label,
 .expiration-security label {
   font-size: 14px;
